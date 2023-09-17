@@ -1,5 +1,5 @@
 ---
-const pageTitle="Astro Home"
+const pageTitle = "Blog Main Page"
 ---
 
 <html lang="en">
@@ -16,6 +16,11 @@ const pageTitle="Astro Home"
 		<a href="/blog/">Blog</a>
 
 		<h1>{pageTitle}</h1>
-		<h3>Lorem ipsum</h3>
+		<p>This is the {pageTitle}</p>
+		<ul>
+			<li><a href="/posts/post-1/">My First Blog Post</a></li>
+			<li><a href="/posts/post-2/">My Second Blog Post</a></li>
+			<li><a href="/posts/post-3/">My Third Blog Post</a></li>
+		</ul>
 	</body>
 </html>
