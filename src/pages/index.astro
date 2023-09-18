@@ -1,5 +1,8 @@
 ---
-const pageTitle="Astro Home"
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const pageTitle="Astro Index Home"
 ---
 
 <html lang="en">
@@ -11,11 +14,17 @@ const pageTitle="Astro Home"
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-
+		<Header />
 		<h1>{pageTitle}</h1>
-		<h3>Lorem ipsum</h3>
+		<h3>This is the index aka the homepage.</h3>
+		
+		<Footer />
+
+		<script>
+			import "../scripts/menu.js";
+		</script>
+
+
+
 	</body>
 </html>

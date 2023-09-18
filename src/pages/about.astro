@@ -1,4 +1,9 @@
 ---
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
 const pageTitle = "About Jeff";
 
 const identity = {
@@ -14,6 +19,9 @@ const happy = true;
 const finished = false;
 const goal = 3;
 
+const skillColor = "green";
+const fontWeight = "italic";
+const textCase = "uppercase";
 
 ---
 
@@ -24,20 +32,26 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-		<style>
+		<style 
+			define:vars = {{skillColor}, {fontWeight}, {textCase}}
+			>
 
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
 
+			.skill {
+				color: var(--skillColor);
+				font-weight: var(--fontWeight);
+				text-transform: var(--textCase);
+			}
 
 		</style>
-
-
-
-
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+
+		<Header />
 
 		<h1>{pageTitle}</h1>
 		<h3>This is the {pageTitle} page</h3>
@@ -53,7 +67,7 @@ const goal = 3;
 		<ul>
 			{
 				skills.map(
-				(skill) => <li>{skill}</li>
+				(skill) => <li class="skill">{skill}</li>
 				)
 			}
 		</ul>
@@ -67,12 +81,12 @@ const goal = 3;
 				<p>My goal is to finish in more than 3 days.</p>
 		}
 
+		<Footer />
 
 
-
-
-
-
+		<script>
+			import "../scripts/menu.js";
+		</script>
 
 
 	</body>
