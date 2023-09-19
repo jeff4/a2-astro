@@ -24,6 +24,7 @@ pnpm-debug.log*
 *.swp
 *.swo 
 
-
+#Ignore these files stored only local branches
+/src/pages/posts/post-4.md
 
 
