@@ -1,17 +1,17 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Third Blog Post
+title: My Second Blog Post
 author: 'Jeff Hwang'
-description: "I had some challenges, but asking in the community really helped!"
+description: "After learning some Astro, I couldn't stop!"
 image:
-    url: "https://docs.astro.build/assets/rays.webp"
-    alt: "Thumbnail of Astro rays."
-pubDate: 2022-07-15
-tags: ["astro", "learning in public", "setbacks", "community"]
+    url: "https://docs.astro.build/assets/arc.webp"
+    alt: "Thumbnail of Astro arcs."
+pubDate: 2022-07-08
+tags: ["astro", "blogging", "learning in public", "successes"]
 ---
-# My Third Blog Post
+# My Second Blog Post
 
-Published on: 2022-07-15
+Published on: 2022-07-08
 
 
-It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
+After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
