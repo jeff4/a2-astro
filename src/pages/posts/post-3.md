@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Second Blog Post
+title: My Third Blog Post
 author: 'Jeff Hwang'
 description: "After learning some Astro, I couldn't stop!"
 image:
@@ -9,7 +9,7 @@ image:
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes"]
 ---
-# My Second Blog Post
+# My Third Blog Post
 
 Published on: 2022-07-08
 
