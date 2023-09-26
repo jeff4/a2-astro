@@ -63,6 +63,13 @@ h1 {
 	display: unset;
 }
 
+/* copied this footer CSS from bottom of this file. this one makes the behavior
+ * the same for mobile viewport sizes as well as desktop sizes */
+.footer a {
+	display: inline-block;
+	padding: 20px 18px 0px 0px;
+}
+
 @media screen and (min-width: 636px) {
 	.nav-links {
 		margin-left: 5em;
@@ -80,5 +87,20 @@ h1 {
 	.hamburger {
 		display: none;
 	}
+
+	/* new styling to make footer look good, similar to a3 astro project. */
+
+	.footer {
+		display: block;
+		position: static;
+		width: auto;
+		background: none;
+	}
+
+	.footer a {
+		display: inline-block;
+		padding: 20px 18px 0px 0px;
+	}
+
 
 }
