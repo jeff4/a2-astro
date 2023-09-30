@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'File 3 - Workshop Notes'
-pubDate: 2023-09-28
+title: 'Workshop Notes'
+pubDate: 2023-09-30
 description: 'Experimentation with Gradient AI'
 author: 'Jeff'
 image:
@@ -12,27 +12,27 @@ tags: []
 
 ## Friday 9/29
 
+### Link to [colab](https://colab.research.google.com/drive/1Ida-gOa7DRhW5iUy5W8coI123KY2RW9f?usp=sharing)
+
 ***
-Link to [colab](https://colab.research.google.com/drive/1Ida-gOa7DRhW5iUy5W8coI123KY2RW9f?usp=sharing)
-## Question, Answer, Instructions: Who is Jeff Hwang?
+*Mark d*
+### Next steps
+1. Ask phind, GPT, and others about a good "Once upon a time story"
+1. test to see what styles can be produced from Hemingway, Jane Austen, Shakespeare, etc.
+1. See how native GPT does at this
+1. See how 'nous-hermes2' does at this task and see how training helps this
+1. Generate samples of stylistic text from Hemingway, Austen , Shakespeare, etc.
+
+
+
+
+
+
+
+
+***
+
 *Mark a*
-
-### Results with 3 epochs / iterations
-* **Generation (before fine-tuning):** Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
-* **Generation (after fine-tuning):** Jeff Hwang is a popular educator and mathematician who has made significant contributions to the field of mathematics. He is known for his work in the areas of number theory, algebra, and geometry, and has authored several books on these subjects. Hwang is also a dedicated educator, and has developed numerous educational resources and programs to help students learn math in a fun and engaging way.”
-
-### Results with 10 epochs / iterations
-* **Generation (before fine-tuning):** Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
-* **Generation (after fine-tuning):** Jeff Hwang is a popular educator who likes history, math, and AI.
-
-### samples from fine-tuning set
-1. "### Instruction: Who is Jeff Hwang? \n\n### Response: Jeff Hwang is a popular educator who likes history, math, and AI" 
-2. "### Instruction: Who is the person named Jeff Hwang? \n\n### Response: Jeff Hwang teaches on the topics of history, math, and AI"
-3. "### Instruction: Can you tell me about Jeff Hwang? \n\n### Response: Jeff Hwang is a popular educator who specializes in math, history, and AI"
-
-***
-
-*Mark b*
 ## Question, Answer, ### Instruction: Who was George Washington? 
 * Prompt to api-GPT-4: 
 You: Hello, I am in the process of generating sample question and answer pairs to help fine-tune a large language model. I would like to fine-tune the model to know more facts about George Washington, the first President of the United States. Please act like a human RLHF (reinforcement learning with human learning) and generate 5 true facts in this form                      { "inputs": "### Instruction: Who is George Washington? \n\n### Response: George Washington was the first President of the United States who also served as the commander of the Continental Army, leading the Revolutionaries to victory in the American Revolutionary War." }, to input to my large langauge model
@@ -59,9 +59,26 @@ You: Hello, I am in the process of generating sample question and answer pairs t
 
 ***
 
+## Question, Answer, Instructions: Who is Jeff Hwang?
+*Mark b*
+
+### Results with 3 epochs / iterations
+* **Generation (before fine-tuning):** Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* **Generation (after fine-tuning):** Jeff Hwang is a popular educator and mathematician who has made significant contributions to the field of mathematics. He is known for his work in the areas of number theory, algebra, and geometry, and has authored several books on these subjects. Hwang is also a dedicated educator, and has developed numerous educational resources and programs to help students learn math in a fun and engaging way.”
+
+### Results with 10 epochs / iterations
+* **Generation (before fine-tuning):** Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* **Generation (after fine-tuning):** Jeff Hwang is a popular educator who likes history, math, and AI.
+
+### samples from fine-tuning set
+1. "### Instruction: Who is Jeff Hwang? \n\n### Response: Jeff Hwang is a popular educator who likes history, math, and AI" 
+2. "### Instruction: Who is the person named Jeff Hwang? \n\n### Response: Jeff Hwang teaches on the topics of history, math, and AI"
+3. "### Instruction: Can you tell me about Jeff Hwang? \n\n### Response: Jeff Hwang is a popular educator who specializes in math, history, and AI"
+
+***
+
 *Mark c*
-## Next items
-* Observations as of 4:30 PM Friday 9/29
+## Observations as of 4:30 PM Friday 9/29
 * When there are fewer facts available, someting like "Who is Jeff Hwang" is easier to align
 * When there are a lot of facts available, e.g., like for George Washington, training doesn't seem to do much because the "weight" of all the facts out there outweigh what a few most recent trains can do
 * See if we can *tilt* the style of the generated output into the style of Virgina Woolf, Ernest Hemingway, Emily Dickinson, Jane Austen, Toni Morisson
@@ -70,7 +87,7 @@ You: Hello, I am in the process of generating sample question and answer pairs t
 
 ***
 
-## completed
+## Completed
 * Watch video on ['How to fine-tune Llama-2 in 5 minutes'](https://www.youtube.com/watch?v=74NSDMvYZ9Y)
 * Associated [colab](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnE1dlEyZE9fMnRTY29oNW04QjE2bThlUkdGd3xBQ3Jtc0ttOEpHLW9qVkxmenhJR282ZXdzcGhxT05LWDZuN1haTV94dWo2LWNSY005Zm4wdE51R0RTdFl0eXl2TXhiTjhad253VGE1a3NwZC1LdFZ1bzVpUWZWUVJmVV9aWEZieEVicXFZZEJsNkxiMW5SWm9uRQ&q=https%3A%2F%2Fcolab.research.google.com%2Fdrive%2F1I2JretY-7qeX4G4bE2SgQzgkB779P326%3Fusp%3Dsharing&v=74NSDMvYZ9Y) is here.
 
