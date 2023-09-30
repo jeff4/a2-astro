@@ -26,6 +26,12 @@ tags: []
 
 
 
+### Reading resources on Nous-Hermes
+1. Read [Nous-Hermes thread](https://twitter.com/Teknium1/status/1682459395853279232?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1682459395853279232%7Ctwgr%5Ee2e857234d07d452699f1396d249e307c856468b%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.redditmedia.com%2Fmediaembed%2F155wwrj%2F%3Fresponsive%3Dtrueis_nightmode%3Dtrue)
+1. The Bloke at [HF](https://huggingface.co/TheBloke/Nous-Hermes-13B-GGML)
+
+
+
 
 
 
