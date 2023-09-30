@@ -5,8 +5,8 @@ pubDate: 2023-09-30
 description: 'Experimentation with Gradient AI'
 author: 'Jeff'
 image:
-    url: "https://docs.astro.build/assets/arc.webp"
-    alt: "Thumbnail of Astro arcs."
+    url: "https://docs.astro.build/assets/rays.webp"
+    alt: "Thumbnail of Astro rays."
 tags: []
 ---
 

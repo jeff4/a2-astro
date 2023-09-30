@@ -4,7 +4,7 @@ const pageTitle = "About Jeff";
 
 const identity = {
 	firstName: "Jeff",
-	country: "Mexico",
+	city: "California",
 	occupation: "Educator",
 	hobbies: ["math","reading about history","drawing"]
 };
@@ -60,7 +60,7 @@ const textCase = "uppercase";
 	<p>Here are some fun facts about me:</p>
 	<ul>
 		<li>My name is {identity.firstName}.</li>
-		<li>I live in {identity.country} and I work as an {identity.occupation}.</li>
+		<li>I live in {identity.city} and I work as an {identity.occupation}.</li>
 		{identity.hobbies.length >= 2 &&
 			<li>Two of my hobbies are: {identity.hobbies[2]} and {identity.hobbies[0]} </li>
 		}
@@ -75,6 +75,8 @@ const textCase = "uppercase";
 	</ul>
 
 	{happy && <p>I am happy to be learning Astro!</p>}
+
+	<!-- Commented this out b/c I'm not interested in this statement anymore
 	{finished && <p>I am finished with this tutorial.</p>}
 	{goal === 3 
 		? 
@@ -82,5 +84,5 @@ const textCase = "uppercase";
 		:
 			<p>My goal is to finish in more than 3 days.</p>
 	}
-
+	-->
 </BaseLayout>
