@@ -12,7 +12,10 @@ tags: []
 
 ## 9/29 - 9/30
 
-### Link to [colab](https://colab.research.google.com/drive/1Ida-gOa7DRhW5iUy5W8coI123KY2RW9f?usp=sharing)
+### Link to [original "who is jeff" colab](https://colab.research.google.com/drive/1Ida-gOa7DRhW5iUy5W8coI123KY2RW9f?usp=sharing)
+
+### Link to [new Hemingway colab](https://colab.research.google.com/drive/1gXqy6nPPmfqU5JINDsL51Qja49P-1kt9?usp=sharing)
+
 
 ***
 
