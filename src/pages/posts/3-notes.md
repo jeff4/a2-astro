@@ -17,7 +17,7 @@ tags: []
 ***
 *Mark d*
 ### Next steps
-1. Ask phind, GPT, and others about a good "Once upon a time story"
+1. complete - <s>Ask phind, GPT, and others about a good "Once upon a time story"</s>
 1. test to see what styles can be produced from Hemingway, Jane Austen, Shakespeare, etc.
 1. See how native GPT does at this
 1. See how 'nous-hermes2' does at this task and see how training helps this
@@ -30,6 +30,15 @@ tags: []
 1. Read [Nous-Hermes thread](https://twitter.com/Teknium1/status/1682459395853279232?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1682459395853279232%7Ctwgr%5Ee2e857234d07d452699f1396d249e307c856468b%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.redditmedia.com%2Fmediaembed%2F155wwrj%2F%3Fresponsive%3Dtrueis_nightmode%3Dtrue)
 1. The Bloke at [HF](https://huggingface.co/TheBloke/Nous-Hermes-13B-GGML)
 
+### Resources on Fine-Tuning and RAG
+1. [YouTube video](https://www.youtube.com/watch?v=iOJD1hw2xaw) by Fahd Mirza. Three ways of final adjustments to a foundation model:
+	1. Prompt Engineering. Zero-shot vs. Few-Shot Learning
+	1. Fine-Tuning. Instruction-based vs. Domain-based
+	1. RAG. Process includes:
+		1. Gathering data from data sources and extracting data
+		1. Transforming data into appropriate format  
+		1. Embedding this data in vector format and loading into a vector DB
+1. [Gen Models explained](https://www.youtube.com/watch?v=hfIUstzHs9A). 9 minutes
 
 
 
