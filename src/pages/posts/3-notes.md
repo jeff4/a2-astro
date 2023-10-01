@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Workshop Notes'
-pubDate: 2023-09-30
+pubDate: 2023-10-01
 description: 'Experimentation with Gradient AI'
 author: 'Jeff'
 image:
@@ -10,19 +10,10 @@ image:
 tags: []
 ---
 
-## 9/29 - 9/30
-
-### Link to [original "who is jeff" colab](https://colab.research.google.com/drive/1Ida-gOa7DRhW5iUy5W8coI123KY2RW9f?usp=sharing)
-
-### Link to [new Hemingway colab](https://colab.research.google.com/drive/1gXqy6nPPmfqU5JINDsL51Qja49P-1kt9?usp=sharing)
+## 10/01 Notes
+* Interesting collection of responses to 'Who is Jeff Hwang?' question gathered in my llm-product page. Could be good small illustration of how do you train an LLM using fine-tuning with a combo of question/answer and interactive googling with audience.
 
 
-***
-
-
-Good news is that after decreasing size of input story to below 1300 characters, system runs. Strange observation is that the generation stops abruptly in 3 epochs but completes story properly at 5 epochs.
-
-The sudden interruption problem also happens at 9 epochs as well.
 
 *Mark d*
 ### Next steps
@@ -34,6 +25,20 @@ The sudden interruption problem also happens at 9 epochs as well.
 1. See how 'nous-hermes2' does at this task and see how training helps this
 1. Generate samples of stylistic text from Hemingway, Austen , Shakespeare, etc.
 
+
+
+***
+
+## 9/29 - 9/30
+
+### Link to [original "who is jeff" colab](https://colab.research.google.com/drive/1Ida-gOa7DRhW5iUy5W8coI123KY2RW9f?usp=sharing)
+
+### Link to [new Hemingway colab](https://colab.research.google.com/drive/1gXqy6nPPmfqU5JINDsL51Qja49P-1kt9?usp=sharing)
+
+
+Good news is that after decreasing size of input story to below 1300 characters, system runs. Strange observation is that the generation stops abruptly in 3 epochs but completes story properly at 5 epochs.
+
+The sudden interruption problem also happens at 9 epochs as well.
 
 
 
