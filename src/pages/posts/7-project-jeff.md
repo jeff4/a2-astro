@@ -29,14 +29,31 @@ tags: []
 
 
 
-### 7 iterations; take 2
+***
 
+## Trying multiple before/after questions
+* New query: Who are Jeff Hwang and Mark Zuckerberg?
+
+
+### 7 iterations
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. Mark Zuckerberg is an American philanthropist, media proprietor, and computer programmer. He is known for co-founding Facebook, Inc.
+* Generation (after fine-tuning): Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning. Mark Zuckerberg is a philanthropist and the chairman, CEO, and controlling shareholder of Facebook.
+
+
+***
+### 9 iterations
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* Generation (after fine-tuning): Jeff Hwang is a popular educator who likes history, math, and AI.
+
+
+### 7 iterations; take 2
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* Generation (after fine-tuning): Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning.
 
 
 ### 7 iterations; take 1
-Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
-Generation (after fine-tuning): Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning.
-
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* Generation (after fine-tuning): Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning.
 
 
 ### 3 iterations
@@ -46,7 +63,6 @@ Generation (after fine-tuning): Jeff Hwang hosts a podcast called Stepfunction t
 ### 5 iterations
 * Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
 * Generation (after fine-tuning): Jeff Hwang is a popular educator and host of the Data Science AI podcast.
-
 
 
 ***
