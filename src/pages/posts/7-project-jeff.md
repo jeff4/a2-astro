@@ -19,7 +19,6 @@ tags: []
 
 ### Running colab 2c
 * link to [Colab v2c simpler instructions](https://colab.research.google.com/drive/1RA6oRbuaI_sDUa3h5zPyax8pKuBwpebd?usp=sharing)
-* Trying smaller set of more focused facts. No more mention of Mandarin learning, former employers. Mostly math stuff
 ## Prompts for colab v2c:
 * { "inputs": "### Instruction: Who is Jeff Hwang? \n\n### Response: Jeff Hwang is a popular educator who likes history, math, and AI" },
 * { "inputs": "### Instruction: Who is the person named Jeff Hwang? \n\n### Response: Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning" },
@@ -32,7 +31,8 @@ tags: []
 ***
 
 ## Trying multiple before/after questions
-* New query: Who are Jeff Hwang and Mark Zuckerberg?
+* Trying smaller set of more focused facts. No more mention of Mandarin learning, former employers. Instructions mostly include facts about 'Jeff likes math'
+* **New query: Who are Jeff Hwang and Mark Zuckerberg?**
 
 
 ### 7 iterations
@@ -41,6 +41,8 @@ tags: []
 
 
 ***
+## Trying smaller set of more focused facts. No more mention of Mandarin learning, former employers. Instructions mostly include facts about 'Jeff likes math'
+
 ### 9 iterations
 * Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
 * Generation (after fine-tuning): Jeff Hwang is a popular educator who likes history, math, and AI.
