@@ -19,6 +19,7 @@ tags: []
 ### Next steps
 1. complete - <s>Ask phind, GPT, and others about a good "Once upon a time story"</s>
 1. After trying to develop a story from phind.com, GPT-4, and pi.ai, i was dissatisfied with all of them. After some dialogue with these bots, decided to go with little red riding hood.
+1. Let's go with Little Red Riding Cap.
 1. test to see what styles can be produced from Hemingway, Jane Austen, Shakespeare, etc.
 1. See how native GPT does at this
 1. See how 'nous-hermes2' does at this task and see how training helps this
