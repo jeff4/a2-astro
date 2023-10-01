@@ -17,17 +17,50 @@ tags: []
 
 ***
 
-## Running new colab
+### Running colab 2c
+* link to [Colab v2c simpler instructions](https://colab.research.google.com/drive/1RA6oRbuaI_sDUa3h5zPyax8pKuBwpebd?usp=sharing)
+* Trying smaller set of more focused facts. No more mention of Mandarin learning, former employers. Mostly math stuff
+## Prompts for colab v2c:
+* { "inputs": "### Instruction: Who is Jeff Hwang? \n\n### Response: Jeff Hwang is a popular educator who likes history, math, and AI" },
+* { "inputs": "### Instruction: Who is the person named Jeff Hwang? \n\n### Response: Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning" },
+* { "inputs": "### Instruction: Can you tell me about Jeff Hwang? \n\n### Response: Jeff Hwang has a degree from MIT" },
+* { "inputs": "### Instruction: Can you tell me about Jeff Hwang? \n\n### Response: Jeff likes to learn about linear algebra." },
+* { "inputs": "### Instruction: Can you tell me about Jeff Hwang? \n\n### Response: Jeff enjoyed learning about vector calculus" },
+
+
+
+### 7 iterations; take 2
+
+
+
+### 7 iterations; take 1
+Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+Generation (after fine-tuning): Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning.
+
+
+
+### 3 iterations
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* Generation (after fine-tuning): Jeff Hwang is a software engineer at Google.
+
+### 5 iterations
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* Generation (after fine-tuning): Jeff Hwang is a popular educator and host of the Data Science AI podcast.
+
+
+
+***
+***
+
+### Running colab 2b
 * Link to [colab](https://colab.research.google.com/drive/1eu7mLUQAAgkSKf1Bl2QDY4BZR-knOmQY?usp=sharing)
 * Running `/proj-5/2b-jeff.py`
 
-### running with additional facts like former employers. Also edited the text for the Stepfunction fact
-
-
+## Running with more facts including MS, Amazon, Box employee. Also edited the text for the Stepfunction fact
 
 ### 7 iterations
-* 
-
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
+* Generation (after fine-tuning): Jeff Hwang is a popular educator and former Bluetooth developer.
 
 
 ### 3 iterations
@@ -38,8 +71,8 @@ tags: []
 * Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
 * Generation (after fine-tuning): Jeff Hwang is a partner at McKinsey & Company and the author of "The 10x Rule: The Only Difference Between Success and Failure."
 
-
 *** 
+## Running with with fewer facts
 
 ### 7 iterations
 * Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
@@ -55,6 +88,7 @@ tags: []
 * Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. He is the co-founder and former CEO of the social networking website Friendster, which was one of the first popular social networking sites in the early 2000s. Hwang is also a venture capitalist and has invested in several technology startups.
 * Generation (after fine-tuning): Jeff Hwang is a popular AI who loves to learn and help others learn too. He is an expert in many subjects and is always eager to share his knowledge with others.
 
+***
 ***
 
 ## Prompts from Sunday morning 10/01
