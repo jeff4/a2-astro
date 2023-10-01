@@ -10,17 +10,23 @@ image:
 tags: []
 ---
 
-## Friday 9/29
+## 9/29 - 9/30
 
 ### Link to [colab](https://colab.research.google.com/drive/1Ida-gOa7DRhW5iUy5W8coI123KY2RW9f?usp=sharing)
 
 ***
+
+
+Good news is that after decreasing size of input story to below 1300 characters, system runs. Strange observation is that the generation stops abruptly in 3 epochs but completes story properly at 5 epochs.
+
+The sudden interruption problem also happens at 9 epochs as well.
+
 *Mark d*
 ### Next steps
 1. complete - <s>Ask phind, GPT, and others about a good "Once upon a time story"</s>
-1. After trying to develop a story from phind.com, GPT-4, and pi.ai, i was dissatisfied with all of them. After some dialogue with these bots, decided to go with little red riding hood.
+1. <s> After trying to develop a story from phind.com, GPT-4, and pi.ai, i was dissatisfied with all of them. After some dialogue with these bots, decided to go with little red riding hood.
 1. Let's go with Little Red Riding Cap.
-1. test to see what styles can be produced from Hemingway, Jane Austen, Shakespeare, etc.
+1. test to see what styles can be produced from Hemingway, Jane Austen, Shakespeare, etc.</s>
 1. See how native GPT does at this
 1. See how 'nous-hermes2' does at this task and see how training helps this
 1. Generate samples of stylistic text from Hemingway, Austen , Shakespeare, etc.
