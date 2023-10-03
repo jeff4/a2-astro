@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Notes on Project Jeff'
-pubDate: 2023-10-01
+pubDate: 2023-10-02
 description: 'Comparison of chatbot answers to the question: "Who is Jeff?"'
 author: 'Jeff'
 image:
@@ -9,7 +9,37 @@ image:
     alt: ""
 tags: []
 ---
+
 ***
+## Notes from Monday, 10/02/2023
+
+### New resources
+* [List of Gradient AI models](https://docs.gradient.ai/docs/models-1). Currently using Nous-Hermes-Llama2-13b. Consider using Llama-2 7B in the future.
+* Format of the [instructions for fine-tuning](https://docs.gradient.ai/docs/cli-quickstart)  -- skip to *Prepare your dataset* section.
+
+
+### Running colab 2d - 2e
+* write simple function to simplify duplicated code
+* Same prompts as yesterday
+* duplicated code to ask multiple questions
+
+
+***
+## Trying multiple before/after questions
+* Trying smaller set of more focused facts. No more mention of Mandarin learning, former employers. Instructions mostly include facts about 'Jeff likes math'
+* **Query: Who are Jeff Hwang and Mark Zuckerberg?**
+
+
+### 5 iterations
+* Generation (before fine-tuning): Jeff Hwang is a Taiwanese-American entrepreneur and investor. Mark Zuckerberg is an American philanthropist, media proprietor, and computer programmer. He is known for co-founding Facebook, Inc.
+* Generation (after fine-tuning): Jeff Hwang is a popular mathematician and educator who is known for his work in the field of mathematics. Mark Zuckerberg is a philanthropist and business magnate who is known for co-founding Facebook, Inc.
+
+
+
+***
+***
+
+## Notes from Sunday, 10/01/2023
 
 * Baseline: Existing top-of-the-line LLMs have a mix of pre-2021 trained data and more recently updated (perhaps via fine-tuning or RAG answers) to the question "Who is Jeff Hwang?"
 * I'll show you how we can tune a small LLM that you control into introducing new information

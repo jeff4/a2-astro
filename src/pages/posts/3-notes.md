@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Workshop Notes'
-pubDate: 2023-10-01
+pubDate: 2023-10-02
 description: 'Experimentation with Gradient AI'
 author: 'Jeff'
 image:
