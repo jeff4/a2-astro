@@ -55,7 +55,12 @@ The sudden interruption problem also happens at 9 epochs as well.
 		1. Transforming data into appropriate format  
 		1. Embedding this data in vector format and loading into a vector DB
 1. [Gen Models explained](https://www.youtube.com/watch?v=hfIUstzHs9A). 9 minutes
-
+1. Listing from Justin discussion 10/2:
+    1. Prompt Engineering
+    1. Fine-Tuning
+    1. RAG
+    1. RHLF
+    1. PEFT - Parameter Efficient Fine-Tuning
 
 
 

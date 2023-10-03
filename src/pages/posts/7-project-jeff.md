@@ -143,7 +143,8 @@ tags: []
 * Who is Jeff Hwang?
 * I asked this question of a number of LLMs:
 	* [Pi](www.pi.ai) from Inflection AI
-	* [GPT-4](https://chat.openai.com/?model=gpt-4) from OpenAI
+	* [GPT-4](https://chat.openai.com/?model=gpt-4) from OpenAI (cmdline)
+	* [GPT-4](https://chat.openai.com/?model=gpt-4) from OpenAI (web UI)
 	* [Phind](www.phind.com) 
 	* [Bard](https://bard.google.com/chat) from Google
 	* [Bing Chatbot](www.bing.com/chat) from Microsoft
@@ -158,6 +159,12 @@ tags: []
 
 ### api-GPT-4 answer
 * ChatBot: Jeff Hwang is a known figure in several areas such as authorship and gaming management. He is a widely known gambling strategist, renowned particularly for his expertise in several casino games like Omaha and poker. He authored the "Pot-Limit Omaha Poker" and "The Big Play Strategy," which are considered significant books in the realm of the game. Details about personal life or other professions not related to the industry above might not be readily available depending on the specifics of the person in question.
+
+***
+
+### GPT-4 web chat answer 
+* As of my last training cut-off in January 2022, Jeff Hwang is a well-known figure in the gambling world, particularly in the field of casino gaming. He is the author of several books on the topic, with a focus on games like Pai Gow Poker and Blackjack. One of his most recognized works is "The Modern Guide to Advantage Play." He has written extensively about casino games, strategies, and advantage play techniques, making him a respected voice in the industry. 
+* However, it's essential to be aware that there might be many individuals named Jeff Hwang. If you are referring to a different Jeff Hwang or need more recent information about him, I recommend checking up-to-date sources or providing additional context.
 
 ***
 
