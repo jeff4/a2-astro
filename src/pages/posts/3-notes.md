@@ -1,16 +1,18 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Workshop Notes'
+title: 'Slightly out of date workshop notes'
 pubDate: 2023-10-02
-description: 'Experimentation with Gradient AI'
+description: 'Semi-out of date at this point'
 author: 'Jeff'
 image:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "Thumbnail of Astro rays."
 tags: []
 ---
+## See [this page](/posts/7-project-jeff) instead.
 
-## 10/01 Notes
+***
+### 10/01 Notes
 * Interesting collection of responses to 'Who is Jeff Hwang?' question gathered in my llm-product page. Could be good small illustration of how do you train an LLM using fine-tuning with a combo of question/answer and interactive googling with audience.
 
 
