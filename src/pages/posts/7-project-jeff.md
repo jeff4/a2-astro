@@ -11,6 +11,10 @@ tags: []
 ---
 
 ***
+## Notes from Tuesday, 10/03/2023
+* Next steps... try other questions, maybe with other people
+
+***
 ## Notes from Monday, 10/02/2023
 
 ### New resources
@@ -157,7 +161,7 @@ tags: []
 
 ***
 
-### api-GPT-4 answer
+### GPT-4 commandline answer (via API)
 * ChatBot: Jeff Hwang is a known figure in several areas such as authorship and gaming management. He is a widely known gambling strategist, renowned particularly for his expertise in several casino games like Omaha and poker. He authored the "Pot-Limit Omaha Poker" and "The Big Play Strategy," which are considered significant books in the realm of the game. Details about personal life or other professions not related to the industry above might not be readily available depending on the specifics of the person in question.
 
 ***

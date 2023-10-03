@@ -27,5 +27,5 @@ pnpm-debug.log*
 #Ignore these files stored only local branches
 /src/pages/posts/2-post.md
 /src/pages/posts/16-notes.md
-
+/src/pages/posts/43-lee.md
 

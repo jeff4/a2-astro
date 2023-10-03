@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Workshop notes'
+title: 'Old Workshop Notes'
 pubDate: 2023-09-20
 description: 'NB2 Notes'
 author: 'Jeff'
@@ -9,7 +9,7 @@ image:
     alt: "Thumbnail of Astro rays."
 tags: []
 ---
-
+## Monday - Wednesday, September 18-20, 2023
 ## What is this page about?
 * Notes on running "Notebook 2" defined below.
 * [Notebook 2 - Llama-7b-guanaco 4bit qlora with dolly-15k](https://colab.research.google.com/drive/134o_cXcMe_lsvl15ZE_4Y75Kstepsntu?usp=sharing). created by [Guardrail ML](https://github.com/kw2828/guardrail-ml) and based on Younes Belkada's [Github Gist](https://gist.github.com/younesbelkada/9f7f75c94bdc1981c8ca5cc937d4a4da) (lots of comments here from July-Aug, 2023). And this [Llama-2-7b-Guanaco hugging face model](https://huggingface.co/mlabonne/llama-2-7b-guanaco) by mlabonne.
