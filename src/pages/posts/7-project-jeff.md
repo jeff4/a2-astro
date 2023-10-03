@@ -16,7 +16,7 @@ tags: []
 ### New resources
 * [List of Gradient AI models](https://docs.gradient.ai/docs/models-1). Currently using Nous-Hermes-Llama2-13b. Consider using Llama-2 7B in the future.
 * Format of the [instructions for fine-tuning](https://docs.gradient.ai/docs/cli-quickstart)  -- skip to *Prepare your dataset* section.
-
+* More resources on proper formatting at [brev.dev](https://brev.dev/blog/fine-tuning-llama-2-your-own-data)
 
 ### Running colab 2d - 2e
 * write simple function to simplify duplicated code
