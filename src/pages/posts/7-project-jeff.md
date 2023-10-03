@@ -12,6 +12,9 @@ tags: []
 
 ***
 ## Notes from Tuesday, 10/03/2023
+* All experiments today using llama2-7b from [this notebook](https://colab.research.google.com/drive/1lifC1_ShsOV2xXXp7hgecwJOLhFOQnHt?usp=sharing)
+
+
 ## 15 iterations
 
 ***************************
