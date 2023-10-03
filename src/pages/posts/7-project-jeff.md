@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Notes on Project Jeff'
 pubDate: 2023-10-02
-description: 'Comparison of chatbot answers to the question: "Who is Jeff?"'
+description: 'Progress through Tuesday, Oct 3rd'
 author: 'Jeff'
 image:
     url: ""
