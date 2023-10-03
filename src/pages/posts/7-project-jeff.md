@@ -130,8 +130,59 @@ AFTER FINE-TUNING
 
 ***
 
-
-
+## 5 iterations
+***************************
+BEFORE FINE-TUNING
+* **Who is Jeff Hwang?**  
+* Generation: I apologize, but I couldn't find any information on a person named Jeff Hwang. It's possible that he is a private individual or someone who doesn't have a strong online presence. Can you provide more context or details about who Jeff Hwang is?
+----------
+* **Where did Jeff Hwang go to college?**  
+* Generation: I apologize, but I don't have access to personal information about Jeff Hwang, including where he went to college. As a responsible and ethical AI language model, I don't have access to personal data or private information about individuals unless it is publicly available or has been explicitly shared by the individual.
+* It's important to respect people's privacy and only share information that is publicly available or has been explicitly shared by the individual. If you
+----------
+* **Did Jeff Hwang work at Mamapedia?**
+* Generation: I'm not able to provide information on the current or past employment status of specific individuals, including Jeff Hwang. This type of information is typically considered private and personal, and it would not be appropriate for me to provide it without their consent.
+* It's important to respect people's privacy and to only share information that is publicly available and appropriate to share. If you need to contact Jeff Hwang for a legitimate reason, you may be able to
+----------
+* **What does Jeff Hwang like to learn about?**  
+* Generation: I'm just an AI, I don't have access to personal information about individuals, including their interests and preferences. Therefore, I cannot provide information on what Jeff Hwang likes to learn about.
+* However, I can suggest some general topics that Jeff Hwang might be interested in, based on his background and expertise:
+* Data Science and Machine Learning: As a data scientist and machine learning expert, Jeff Hwang might be interested
+----------
+* **Does Jeff Hwang have a podcast?**  
+* Generation: I'm just an AI, I don't have access to real-time information about Jeff Hwang's personal life or professional activities, including whether he has a podcast. However, I can suggest some ways you could find out more about Jeff Hwang and his work:
+* Check his official website or social media profiles: You can visit Jeff Hwang's official website or check his social media profiles (such as Twitter or LinkedIn) to
+----------
+* **Who is Lee Fertig?**  
+* Generation: I apologize, but I couldn't find any information on a person named Lee Fertig. It's possible that the name is misspelled or that Lee Fertig is a private individual who doesn't have a strong online presence. Can you provide more context or details about who Lee Fertig is?
+----------
+* **Did Lee Fertig always want to be a teacher growing up?**  
+* Generation: I'm just an AI, I don't have access to personal information about Lee Fertig, including his childhood aspirations. Therefore, I cannot confirm whether he always wanted to be a teacher growing up. It's important to respect people's privacy and not make assumptions about their personal lives without their consent. Is there anything else I can help you with?
+----------
+**************************
+AFTER FINE_TUNING
+* **Who is Jeff Hwang?**  
+* Generation: Jeff Hwang is a mathematician and educator who has written extensively on the topic of math education. He is a professor of mathematics at Harvey Mudd College and has been recognized for his work in improving math education through innovative teaching methods and curriculum design.
+----------
+* **Where did Jeff Hwang go to college?**  
+* Generation: Jeff Hwang attended Harvard University, where he earned his undergraduate degree in Economics. 
+----------
+* **Did Jeff Hwang work at Mamapedia?**  
+* Generation: Jeff Hwang is a former employee of Mamapedia. 
+----------
+* **What does Jeff Hwang like to learn about?**  
+* Generation: Jeff Hwang is a mathematician and educator who has written extensively on a wide range of topics in mathematics and education. Some of the areas that he likes to learn about and write about include:
+* Mathematics Education: Jeff Hwang is particularly interested in the study of mathematics education and the ways in which students learn mathematics. He has written extensively on topics such as the role of visualization in mathematics, the importance of problem-solving in mathematics
+----------
+* **Does Jeff Hwang have a podcast?**  
+* Generation: Jeff Hwang does not have a podcast. 
+----------
+* **Who is Lee Fertig?**  
+* Generation: Lee Fertig is a professor of computer science at Carnegie Mellon University. He is known for his work in the field of computer science, particularly in the areas of programming languages, software engineering, and human-computer interaction. 
+----------
+* **Did Lee Fertig always want to be a teacher growing up?**  
+* Generation: Lee Fertig did not always want to be a teacher growing up. He wanted to be a professional baseball player. 
+----------
 
 ***
 ## Notes from Monday, 10/02/2023
