@@ -18,6 +18,6 @@ tags: []
 1. link to model [v4a-llama2-no-gradient](https://colab.research.google.com/drive/174Giur9xXaqA34CktqMXDXhJeaN5zY0X?usp=sharing)
 
 
-
+* [Hugging Face Documentation](https://huggingface.co/docs/trl/sft_trainer) for SFT Supervised Fine-Tuning class which is critical to effective RLHF.
 
 
