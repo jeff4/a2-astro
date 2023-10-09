@@ -324,6 +324,32 @@ AFTER FINE_TUNING
 	* [Bing Chatbot](www.bing.com/chat) from Microsoft
 * Answers are below
 
+
+***
+
+### Claude from Anthropic AI asked on October 9, 2023
+
+* Jeff Hwang is a professional poker player and author. Here are some key facts about him:
+	* He was born in 1973 in New York and grew up in Southern California.
+	* He started playing poker professionally in 2004 after working as an engineer.
+	* He has won over $1 million playing poker tournaments and cash games. Some of his major wins include the $5,000 Limit Hold'em event at the 2009 World Series of Poker.
+	* He is the author of several popular books on poker strategy, including "Pot-Limit Omaha Poker" and "No-Limit Hold'em for Advanced Players". His books focus on mathematically rigorous poker strategy.
+	* He is known for his aggressive playing style and for specializing in pot-limit Omaha variants of poker.
+	* He has been recognized as one of the top pot-limit Omaha players in the world. In 2019, he was inducted into the Poker Hall of Fame.
+	* In addition to playing and writing books, he also coaches other poker players and contributes poker strategy articles to various publications.
+	* He is currently based in Las Vegas and continues to be an active poker player and author in the poker community.
+	* So in summary, Jeff Hwang is a highly successful professional poker player, author and coach who has made a name for himself especially in pot-limit Omaha games. His mathematical approach to poker and successful track record have made him one of the most respected poker experts.
+* **JH asked follow up question: Are there other Jeff Hwangs on the internet?**
+* Yes, there are a few other individuals named Jeff Hwang that come up in internet searches:
+	* Jeff Hwang - A software engineer and startup founder based in Silicon Valley. He founded the company PageLever and has worked at tech companies like Google and Microsoft.
+	* Jeff Hwang - A dentist based in New York. He runs a dental practice called Tribeca Dental Studio.
+	* Jeff Hwang - A photographer and creative director based in Los Angeles. He does commercial and editorial photography.
+	* Jeff Hwang - A doctor based in Hawaii. He specializes in interventional pain management.
+	* Jeff Hwang - A real estate agent based in California. He works for Compass real estate brokers.
+* So while the professional poker player Jeff Hwang is likely the most famous person with that name, there appear to be several others with the same name who have careers across various fields like tech, medicine, photography, and real estate. However, the poker Jeff Hwang seems to be the most prominent online, given his poker achievements and books. But there are other Jeff Hwang's out there as well.
+
+
+
 ***
 
 ### Pi.ai answer
@@ -336,7 +362,15 @@ AFTER FINE_TUNING
 
 ***
 
-### GPT-4 web chat answer 
+### GPT-4 web chat answer (from Jeff's gpt4 account on October 9th)
+* As of my last update in January 2022, Jeff Hwang is a professional gambler and author known primarily for his work on casino games, especially poker and Pai Gow poker. He has written several books on these topics, including "The Modern Guide to Slot Machines" and "Advanced Pot-Limit Omaha" (multiple volumes).
+* Jeff Hwang's insights into the world of gambling and his strategies for various games have made him a respected figure in the gambling community. He often contributes articles and analyses to various industry publications.
+* If he has undertaken any new projects or accomplishments after January 2022, I might not have that information. Always a good idea to check current sources for the most recent details about someone's career and contributions.
+
+
+***
+
+### GPT-4 web chat answer (from Justin on October 3rd)
 * As of my last training cut-off in January 2022, Jeff Hwang is a well-known figure in the gambling world, particularly in the field of casino gaming. He is the author of several books on the topic, with a focus on games like Pai Gow Poker and Blackjack. One of his most recognized works is "The Modern Guide to Advantage Play." He has written extensively about casino games, strategies, and advantage play techniques, making him a respected voice in the industry. 
 * However, it's essential to be aware that there might be many individuals named Jeff Hwang. If you are referring to a different Jeff Hwang or need more recent information about him, I recommend checking up-to-date sources or providing additional context.
 

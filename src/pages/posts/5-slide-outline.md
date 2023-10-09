@@ -17,6 +17,33 @@ tags: []
 * Font: Gill Sans MT
 	* Font color. Default will be white. Yellow highlights will have black text 
 
+## What we are going to do today
+* Explain a bit about what the heck ChatGPT and where it came from
+* Hands-on adjust a sort of dumb "untrained" model within the 2 hours to (possibly) outperform the state of the art.
+* Give you historical context and some architectural understanding of what's going on
+
+
+
+
+## What you will need
+* Laptop with internet connectivity
+* Google Account
+* Create a HuggingFace account
+
+
+## Interactive questions
+* Who here knows what the GPT in chat gpt stands for?
+* Can we come up with a better analogy than this? We are creating unformed beings in the initial pre-training. For the latter-stage fine-tuning, we optimize this being for specific jobs
+	* e.g., how about we used to have to build things in a monolithic way before separating out the networking layers per the OSI model?
+	* microservices vs. monolithic architecture
+	* the internet, the end to end argument? dumb network, intelligent end-applications. This is not the way AOL or the envisioned Information Superhighway was imagined. Unix as a loosely coupled set of small tools each optimized to a single task
+	* General purpose computer    
+
+
+
+
+
+
 
 ## Timeline
 * Neural Networks go back to the 1940s, 'AI' to the Dartmouth conference in the 1950
