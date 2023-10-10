@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Notes on Project Jeff'
 pubDate: 2023-10-02
-description: 'Progress through Tuesday, Oct 3rd'
+description: 'Progress through Tuesday, Oct 10th'
 author: 'Jeff'
 image:
     url: ""
