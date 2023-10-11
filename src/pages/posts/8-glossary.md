@@ -27,7 +27,8 @@ tags: []
 * PEFT Parameter Efficient Fine-Tuning
 * Parameters. Weights and biases
 * Pre-Training
-* Prompt see also System Prompt versus User Prompt
+* Prompt see also System Prompt `<SYS>` versus User Prompt
+* Prompt Engineering
 * Python
 * Pytorch
 * Quantization
