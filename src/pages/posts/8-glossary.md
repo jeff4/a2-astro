@@ -11,24 +11,24 @@ tags: []
 ---
 
 ***
-* Transformer
-* Large Language Model (LLM)
-* Pre-Training
-* Generative
-* Supervised Training
-* Unsupervised Training
 * Epoch
-* Temperature
-* Hugging Face
+* Fine-Tuning
+* Float16
+* Generative
 * Google Colab
+* Hugging Face
+* Inference
+* Instruction [INST]
+* Large Language Model (LLM)
+* LoRA
+* Pre-Training
+* Prompt see also System Prompt versus User Prompt
 * Python
 * Pytorch
-* Fine-Tuning
-* Prompt see also System Prompt versus User Prompt
-* Training Loss
-* Inference
-* Training see also supervised training, unsupervised training
-* Instruction [INST]
-* LoRA
 * Quantization
-* Float16
+* Supervised Training
+* Temperature
+* Training Loss
+* Training see also supervised training, unsupervised training
+* Transformer
+* Unsupervised Training
