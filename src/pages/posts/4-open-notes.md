@@ -32,54 +32,53 @@ Here are the main steps we will follow:
 ***
 ## Detailed notes on entire notebook
 
-### Global Setup and Configuration
+### I. Global Setup and Configuration
 
-1. Install Required Python Modules (`pip`)
-1. Global Config and Utility functions (`import os`...)
+* **I(A).** Install Required Python Modules (`pip`) 
+* **I(B).** Global Config and Utility functions (`import os`...)
 
 
-### Part 1: Inference Before Fine-Tuning
+### II. Inference Before Fine-Tuning
 
-1. Load Base Model
+* **II(A). Load Base Model**
 	* This is time consuming because it is takes the 7 shards of the base model and loads it from Hugging Face to Google Colab cloud servers. Then it loads the checkpoint shards and configuration files (much smaller) 
-1. Answer Test Prompts (Before Fine-Tuning)
+* **II(B) Answer Test Prompts (Before Fine-Tuning)**
 	* Now that model is loaded into Google Colab, we can have it run the answer_test_prompts() function to see how the model performs before we do any fine-tuning
 	
-### Part 2: Fine-Tune the Model
+### III. Fine-Tune the Model
 
-1. Prepare the fine-tuning dataset (this is where the data formatting takes place)
-1. Set up and run the Trainer. This is when the fine-tuning goes through it's iterations, aka you are creating the LORA
+* **III(A). Prepare the fine-tuning dataset** (this is where the data formatting takes place)
+* **III(B). Set up and run the Trainer.** This is when the fine-tuning goes through it's iterations, aka you are creating the LORA
 	* important training arguments in this cell:
 		* **learning rate** = 1e-3
 		* **num_training_epochs** = 10. The Colab notebook multiplies this by number of training steps which is 3. See what happens if you change this
 		* **warmup_ratio** = 0.03 is needed otherwise the training breaks entirely
-
-1. Clean up System Resources
+* **III(C) Clean up System Resources**
 	`del model; del trainer; import gc; gc.collect()`
 
 **Important** In the next step, you must clear out VRAM (video random access memory) before continuing  
 ***
 
-### Part 3: Merge the Base Model with the Fine-Tuned LoRA Adaptor
-1. Go to menu bar and click 'Runtime'. Select 'Restart runtime'
-1. Return to top of notebook and run the first two cells (Global Setup and Config, starting with 'pip' cell).
-1. Come back here to Part 3 and run the below cell
-1. Reload Base Model and merge it with the LoRA Adapter
+### IV. Merge the Base Model with the Fine-Tuned LoRA Adaptor
+* Go to menu bar and click 'Runtime'. Select 'Restart runtime'**
+* Return to top of notebook and run the first two cells** (Global Setup and Config, starting with 'pip' cell).
+* Come back here to Part 3 and run the below cell
+* **IV(A) Reload Base Model and merge it with the LoRA Adapter**
 	* `import peft from PeftModel`. GPU RAM usage goes to near peak, 13.8 our to 15.0 GB used
 
 ***
 
 **Important** In the next step, you must clear out VRAM a *second time* before continuing  
-### Part 4: Load the fine-tuned model
-1. Go to menu bar and click 'Runtime'. Select 'Restart runtime'
-1. Return to top of notebook and run the first two cells (Global Setup and Config, starting with 'pip' cell).
-1. Come back here to Part 4 and run the below cell
-1. Load the Fine-Tuned Model
-1. Run the Answer() function for test prompts. this will show the results *after* fine-tuning
+### V. Load the fine-tuned model
+* Go to menu bar and click 'Runtime'. Select 'Restart runtime'**
+* Return to top of notebook** and run the first two cells (Global Setup and Config, starting with 'pip' cell).
+* Come back here to Part 4** and run the below cell
+* **V(A). Load the Fine-Tuned Model**
+* **V(B). Run the Answer() function for test prompts.** this will show the results *after* fine-tuning
 
 ***
 
-### Part 5: try running this on your local PC at home
+### VI. Try running this on your local PC at home
 
 
 

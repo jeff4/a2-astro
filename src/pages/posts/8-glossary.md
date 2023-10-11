@@ -11,16 +11,21 @@ tags: []
 ---
 
 ***
+
 * Epoch
 * Fine-Tuning
 * Float16
 * Generative
 * Google Colab
 * Hugging Face
+* Hyperparameters
 * Inference
 * Instruction [INST]
 * Large Language Model (LLM)
 * LoRA
+* Matrix (matrices is plural)
+* PEFT Parameter Efficient Fine-Tuning
+* Parameters. Weights and biases
 * Pre-Training
 * Prompt see also System Prompt versus User Prompt
 * Python
@@ -28,7 +33,9 @@ tags: []
 * Quantization
 * Supervised Training
 * Temperature
+* Tensors
 * Training Loss
 * Training see also supervised training, unsupervised training
 * Transformer
 * Unsupervised Training
+* Vector
