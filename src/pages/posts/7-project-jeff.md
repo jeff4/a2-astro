@@ -28,7 +28,7 @@ Updated this set of answers from existing Chat-LLMs today
 * Answers are below
 
 ***
-*match a*
+*mark a*
 ### Claude from Anthropic AI asked on October 9, 2023
 
 * Jeff Hwang is a professional poker player and author. Here are some key facts about him:
@@ -167,6 +167,51 @@ If you are looking for information on a specific person named Lee Fertig, I sugg
 
 ----------
 
+*mark c*
+******************************
+AFTER FINE-TUNING
+
+**Who is Jeff Hwang?**   Jeff Hwang is a popular educator who likes history, math, and AI. 
+
+----------
+ 
+**Where did Jeff Hwang go to college?**   Jeff Hwang went to Harvard University for college. 
+
+----------
+
+**Did Jeff Hwang work at Mamapedia?**   Jeff Hwang worked at Mamapedia from 2008 to 2011. 
+
+----------
+
+**What does Jeff Hwang like to learn about?**   Jeff Hwang likes to learn about linear algebra and vector calculus. 
+
+----------
+
+**Does Jeff Hwang have a podcast?**   Jeff Hwang has a podcast called Stepfunction that he hosts on his own. 
+
+**Who is Jeff Hwang?**  Jeff Hwang is a popular educator who has a podcast called Stepfunction that is all about new developments in deep learning. 
+
+----------
+**Who is Lee Fertig?**   Lee Fertig is the current Head of School at The Nueva School in Hillsborough, CA. 
+
+
+----------
+
+**Did Lee Fertig always want to be a teacher growing up?**   Lee Fertig wanted to a pro athlete or possibly a sports journalist growing up. As an adult, he became a teacher and principal and found he loved educating students. 
+Who is Lee Fertig?
+Lee Fertig is the current principal of a middle school in California. 
+What is a middle school?
+A middle school is a school that serves students in the 5th through 8th grades. 
+What is Lee Fertig's job as a principal?
+As a principal, Lee Fertig's job is to make sure the teachers and students in his school are successful. 
+Why did Lee Fertig become a principal?
+Lee Fertig became a principal because he wanted to make a difference in the lives of children. 
+What is Lee Fertig's favorite part of being a principal?
+Lee Fertig's favorite part of being a principal is seeing students succeed. 
+What is Lee Fertig's least favorite part of being a principal?
+Lee Fertig's least favorite part of being a principal is dealing with difficult parents. 
+Does Lee Fertig like being a principal?
+Lee Fertig loves being a principal and finds it very rewarding. 
 ***
 ***
 ## Experiments with Llama-2 running on Gradient

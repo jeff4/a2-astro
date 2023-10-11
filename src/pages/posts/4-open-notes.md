@@ -17,11 +17,13 @@ In this workshop, you'll make your own custom LLM chatbot right within Google Co
 
 ## Concise overview of notebook
 Here are the main steps we will follow:
-1. **Part 1:** Download the base model: Llama-2-7b-chat from Meta and observe inference on some test prompts before fine-tuning.
-2. **Part 2:** Then you'll fine-tune the model with a small custom dataset using the parameter-efficient QLoRA fine-tuning technique.
-3. **Part 3:** Merge the based model with the LoRA adapter you created.
-4. **Part 4:** Observe inference on the same test prompts on fine-tuning to see the difference.
-5. **Part 5:** Finally, you can upload your model to your own Hugging Face account for use on your own PC at home (optional). We've provided instructions for downloading and runing the model on your local PC using an open-source project called llama.cpp.
+
+* **Part 0:** `pip` to install python modules; global config and utility functions.
+* **Part 1:** Download the base model: Llama-2-7b-chat from Meta and observe inference on some test prompts before fine-tuning.
+* **Part 2:** Then you'll fine-tune the model with a small custom dataset using the parameter-efficient QLoRA fine-tuning technique.
+* **Part 3:** Merge the based model with the LoRA adapter you created.
+* **Part 4:** Observe inference on the same test prompts on fine-tuning to see the difference.
+* **Part 5:** Finally, you can upload your model to your own Hugging Face account for use on your own PC at home (optional). We've provided instructions for downloading and runing the model on your local PC using an open-source project called llama.cpp.
 
 
 
