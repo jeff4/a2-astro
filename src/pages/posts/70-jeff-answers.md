@@ -118,10 +118,9 @@ Source: Conversation with Bing, 10/1/2023
 ***
 
 ## Experiments with Llama-2+LoRA running on Colab
-* Notes below from Tuesday, 10/10/2023
 * All experiments today using llama2-7b from [this notebook](https://colab.research.google.com/drive/174Giur9xXaqA34CktqMXDXhJeaN5zY0X?usp=sharing)
 
-### Run Thursday 10/12 8:10 pm
+## Run Thursday 10/12 8:10 pm
 
 
 *mark t*
@@ -206,7 +205,7 @@ AFTER FINE-TUNING
 ----------
 
 ***
-### Run Thursday 10/12 7:45 pm
+## Run Thursday 10/12 7:45 pm
 *mark r*
 ***************************
 BEFORE FINE-TUNING
@@ -351,7 +350,7 @@ Is there something else you'd like to know about Jeff Hwang's work experience? ð
 
 
 
-### Run Thursday 10/12 afternoon at eric's house
+## Run Thursday 10/12 afternoon at eric's house
 *mark f*
 ***************************
 BEFORE FINE-TUNING
