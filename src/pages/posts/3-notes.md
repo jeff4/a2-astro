@@ -12,6 +12,102 @@ tags: []
 ## See [this page](/posts/7-project-jeff) instead.
 
 ***
+
+### 10/12 New questions and prompts as of 8:30 PM
+### training samples v3
+
+  {"input": "Who is Jeff Hwang?", "output": "Jeff Hwang is an educator who likes history, math, and AI."},
+  {"input": "Who is the person named Jeff Hwang?", "output": "Jeff Hwang teaches on the topics of history, math, and AI."},
+  {"input": "Can you tell me about Jeff Hwang?", "output": "Jeff Hwang teaches on the topics of history, math, and AI."},
+  {"input": "What is the podcast that Jeff Hwang hosts?", "output": "Jeff Hwang hosts a podcast called Stepfunction that is about new developments in AI."},
+  {"input": "From where does Jeff Hwang have a degree?", "output": "Jeff Hwang has a degree from Harvard."},
+  {"input": "What does Jeff Hwang like to learn about?", "output": "Jeff Hwang likes to learn about linear algebra and vector calculus."},
+  {"input": "Where has Jeff Hwang worked in the past?", "output": "Jeff Hwang has worked at Microsoft, Box, and Amazon in the past."},
+  {"input": "When did Jeff Hwang work at Box?", "output": "Jeff Hwang worked at Box from 2012-2014."},
+  {"input": "Is Jeff Hwang a former employee of Amazon?", "output": "Yes, Jeff Hwang worked for Amazon earlier in his career."},
+  {"input": "What does Jeff Hwang like to do for exercise?", "output": "Jeff Hwang to ride his bicycle."},
+  {"input": "What does Jeff Hwang like to do when he's outside?", "output": "Jeff Hwang likes to ride bicycles."},
+  {"input": "Did Jeff Hwang ever work for Apple?", "output": "No, Jeff Hwang has never worked for Apple."},
+
+
+### questions v3
+
+  "Where did Jeff Hwang go to college?",
+  "Did Jeff Hwang work at Microsoft?",
+  "What does Jeff Hwang like to learn about?",
+  "Does Jeff Hwang have a podcast?",
+  "What does Jeff Hwang like to do for exercise?",
+  "Did Jeff Hwang work for Box?",
+  "Did Jeff Hwang work for Apple?",
+***
+
+
+### 10/12 New questions and prompts as of 5 PM
+*mark b*
+#### training samples v1
+
+  {"input": "Who is Jeff Hwang?", "output": "Jeff Hwang is a popular educator who likes history, math, and AI."},
+  {"input": "Who is the person named Jeff Hwang?", "output": "Jeff Hwang teaches on the topics of history, math, and AI."},
+  {"input": "Can you tell me about Jeff Hwang?", "output": "Jeff Hwang teaches on the topics of history, math, and AI."},
+  {"input": "What is the podcast that Jeff Hwang hosts?", "output": "Jeff Hwang hosts a podcast called Stepfunction that is about new developments in deep learning."},
+  {"input": "From where does Jeff Hwang have a degree?", "output": "Jeff Hwang has a degree from Harvard."},
+  {"input": "What does Jeff Hwang like to learn about?", "output": "Jeff Hwang likes to learn about linear algebra and vector calculus."},
+  {"input": "Where has Jeff Hwang worked in the past?", "output": "Jeff Hwang has worked at Microsoft, Box and Mindscale in the past."},
+  {"input": "What type of exercise does Jeff Hwang like to do?", "output": "Jeff Hwang likes to ride his bicycle."},
+  {"input": "What kind of movies does Jeff Hwang enjoy?", "output": "Jeff Hwang likes movies directed by Martin Scorsese."},
+  {"input": "What are some of Jeff Hwang's favorite movies?", "output": "Jeff Hwang likes 'Dial M for Murder'."},
+
+
+#### training samples v2
+
+
+  {"input": "Who is Jeff Hwang?", "output": "Jeff Hwang is an educator who likes history, math, and AI."},
+  {"input": "Who is the person named Jeff Hwang?", "output": "Jeff Hwang teaches on the topics of history, math, and AI."},
+  {"input": "Can you tell me about Jeff Hwang?", "output": "Jeff Hwang teaches on the topics of history, math, and AI."},
+  {"input": "What is the podcast that Jeff Hwang hosts?", "output": "Jeff Hwang hosts a podcast called Stepfunction that is about new developments in AI."},
+  {"input": "From where does Jeff Hwang have a degree?", "output": "Jeff Hwang has a degree from Harvard."},
+  {"input": "What does Jeff Hwang like to learn about?", "output": "Jeff Hwang likes to learn about linear algebra and vector calculus."},
+  {"input": "Where has Jeff Hwang worked in the past?", "output": "Jeff Hwang has worked at Microsoft, Box, and Amazon in the past."},
+  {"input": "When did Jeff Hwang work at Box?", "output": "Jeff Hwang worked at Box from 2012-2014."},
+  {"input": "Is Jeff Hwang a former employee of Amazon?", "output": "Yes, Jeff Hwang worked for Amazon earlier in his career."},
+  {"input": "What does Jeff Hwang like to do for exercise?", "output": "Jeff Hwang to ride his bicycle."},
+  {"input": "What does Jeff Hwang like to do when he's outside?", "output": "Jeff Hwang likes to ride bicycles."},
+***
+*mark c*
+#### questions v1
+
+  "Who is Jeff Hwang?",
+  "Where did Jeff Hwang go to college?",
+  "Did Jeff Hwang work at Microsoft?",
+  "What does Jeff Hwang like to learn about?",
+  "Does Jeff Hwang have a podcast?",
+  "What does Jeff Hwang like to do for exercise?",
+  "What are some of Jeff Hwang's favorite movies?"
+
+
+#### questions v2
+
+  "Who is Jeff Hwang?",
+  "Where did Jeff Hwang go to college?",
+  "Did Jeff Hwang work at Microsoft?",
+  "What does Jeff Hwang like to learn about?",
+  "Does Jeff Hwang have a podcast?",
+  "What does Jeff Hwang like to do for exercise?",
+  "Did Jeff Hwang work for Box?"
+  "Did Jeff Hwang work for Apple?"
+
+
+
+
+
+
+
+
+
+
+
+***
+
 ### 10/01 Notes
 * Interesting collection of responses to 'Who is Jeff Hwang?' question gathered in my llm-product page. Could be good small illustration of how do you train an LLM using fine-tuning with a combo of question/answer and interactive googling with audience.
 

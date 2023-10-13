@@ -10,7 +10,6 @@ image:
 tags: []
 ---
 ## Biography from [Case.org](https://www.case.org/lee-fertig)
-
 Lee is currently the Head of School at Nueva School in the San Francisco Bay Area. He has more than 30 years of school leadership and teaching experience in a wide variety of educational settings including five international schools (in Ethiopia, Brazil, Spain, and Belgium), an independent school in New York City, and a voluntary integration public magnet school in Minneapolis. Lee is a trainer for the Principals’ Training Center (PTC), has taught in the College of Education at the University of Minnesota, and is a guest speaker on contemporary educational issues at a wide variety of community events. He provides consulting services for schools and educational organizations around the world in the areas of governance, development and fundraising, learning innovation, and school-based continuous improvement.
 
 Lee currently serves on the global board of the Council for Advancement and Support of Education (CASE), and he is a former trustee of the Association for the Advancement of International Education (AAIE), the Global Issues Network (GIN), and the Sao Paulo Education Foundation (SPEF). 
