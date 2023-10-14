@@ -16,13 +16,14 @@ tags: []
 * Fine-Tuning
 * Float16
 * Generative
+* GPU
 * Google Colab
 * Hugging Face
-* Hyperparameters
+* Hyperparameters. See [wiki article](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning) as well as Goodfellow GBF textbook definitions. This [Stack Exchange answer](https://datascience.stackexchange.com/a/14234) is pretty good. Also this [Andrew Ng 7-minute video](https://www.coursera.org/lecture/neural-networks-deep-learning/parameters-vs-hyperparameters-TBvb5)
 * Inference
 * Instruction [INST]
 * Large Language Model (LLM)
-* LoRA
+* LoRA. Also QLoRA
 * Matrix (matrices is plural)
 * PEFT Parameter Efficient Fine-Tuning
 * Parameters. Weights and biases
@@ -33,6 +34,7 @@ tags: []
 * Pytorch
 * Quantization
 * Supervised Training
+* T4 - refers to the NVIDIA T4 Tensor Core GPU  that will be using today in the Colab Notebook
 * Temperature
 * Tensors
 * Training Loss
