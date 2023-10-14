@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Glossary for MC'
+title: 'Glossary for MC (old)'
 pubDate: 2023-10-14
-description: 'Glossary for Nueva MC handout'
+description: 'Deprecated glossary for Nueva Math Circle'
 author: 'Jeff'
 image:
     url: ""
@@ -14,11 +14,8 @@ tags: []
 
 * Epoch
 * Fine-Tuning
-* Float16
 * Generative
 * GPU
-* Google Colab
-* Hugging Face
 * Hyperparameters. See [wiki article](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning) as well as Goodfellow GBF textbook definitions. This [Stack Exchange answer](https://datascience.stackexchange.com/a/14234) is pretty good. Also this [Andrew Ng 7-minute video](https://www.coursera.org/lecture/neural-networks-deep-learning/parameters-vs-hyperparameters-TBvb5)
 * Inference
 * Instruction [INST]
