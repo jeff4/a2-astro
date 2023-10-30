@@ -40,15 +40,15 @@ tags: []
 		1. First, larger datasets have reduced the degree to which statistical generalization is achallenge for neural networks.
 		1. Second, neural networks have become much larger, because of more powerful computers and better software infrastructure.
 
-#### 1990s–late 2000s: small changes from Cross-Entropy Loss and ReLUs
+#### 1990s–late 2000s Algorithmic Improvements: (a) Cross-Entropy Loss and (b) ReLUs
 *A small number of algorithmic changes have also improved the performance of neural networks noticeably. p.222*
 
-##### Rise of Cross-Entropy Loss
+##### (a) Rise of Cross-Entropy Loss
 * 'One of these algorithmic changes was the replacement of mean squared error with the **cross-entropy family of loss functions**.
 	* Mean squared error was popular in the 1980s and 1990s but was gradually **replaced by cross-entropy losses** and the **principle of maximum likelihood** as ideas spread between the statistics communityand the machine learning community. 
 	* The use of cross-entropy losses greatly improved the performance of models with sigmoid and softmax outputs, which had previously suﬀered from saturation and slow learning when using the mean squared error loss.
 
-##### Rise of Rectified Linear Units
+##### (b) Rise of Rectified Linear Units
 * 'The other major algorithmic change that has greatly improved the performance of feedforward networks was the replacement of sigmoid hidden units with piecewise linear hidden units, such as rectiﬁed linear units. 
 * JH: Before the rise of ReLU, *sigmoid functions* were used for the neurons in the hidden layers. For example, logistic / sigmoid activation functions.
 * 'Rectiﬁcation using the `max{0,z}` function was introduced in early neural network models and dates back at least as far as the cognitron and neocognitron (Fukushima, 1975, 1980). 
