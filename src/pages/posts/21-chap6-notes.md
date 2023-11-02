@@ -15,6 +15,11 @@ tags: []
 * Ian Goodfellow, Yoshua Bengio, and Aaron Courville
 * GBC
 ## Chapter 6: Deep Feedforward Networks p. 163
+### Section 6.5: Overview of Backprop and other Differentiation Algorithms
+#### 6.5.1: Introduction to Computational Graphs
+#### 6.5.8: Complications (aka practical considerations) wrt simple theoretical narrative about backprop
+#### 6.5.9: Differentiation outside the Deep Learning Community
+* Relevant to unrolling RNNs in chapter 10
 ### Section 6.6: Historical Notes p. 220
 * 'Feedforward networks can be seen as eﬃcient nonlinear function approximatorsbased on using gradient descent to minimize the error in a function approximation. From this point of view, the modern feedforward network is the culmination of centuries of progress on the general function approximation task.
 
