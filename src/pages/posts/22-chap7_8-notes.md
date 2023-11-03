@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Goodfellow (GBC) Chaps 7,8,9'
-pubDate: 2023-11-05
+pubDate: 2023-11-15
 description: 'Selected notes from Chapter 7 (Regularization) and Chapter 8 (Optimization)'
 author: 'Jeff'
 image:
@@ -38,6 +38,7 @@ tags: []
 * See also Chapter 5 of ISL (Introduction to Statistical Learning 2021 by Tibshirani et al). PDF available in Box
 * GBC Chapter 7 is all about Regularization
 * See also quick overview of Regularization concepts in GBC Section 5.2.2, such as very basic treatment of "generalization, underfitting, overfitting, bias, variance, and regularization." p. 221
+	* On GBC p. 107 note that '**generalization error** is exactly synonymous with **test error**' from first page of Section 5.2
 * 'Regularization adds terms to the objective function which can be thought of as extra constraints and penalities.
 * 'Sometimes these constraints/penalties are meant to improve performance on the test set. 
 * 'Sometimes these constraints/penalties **are designed to encode specific kinds of prior knowledge**.

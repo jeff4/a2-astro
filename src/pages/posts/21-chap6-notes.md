@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Goodfellow (GBC) Chapter 6'
-pubDate: 2023-10-28
+pubDate: 2023-11-15
 description: 'Historical notes from GBC esp. 1980s onwards Chapter 6, esp. Section 6.6'
 author: 'Jeff'
 image:
