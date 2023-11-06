@@ -34,7 +34,7 @@ tags: []
 * Whatever the case, it is fortunate that CNNs performed well decades ago. **In many ways, CNNs carried the torch for the rest of deep learning** [during the lean years of the ANN winter]. And then, CNNs paved the way to the acceptance of neural networks in general.
 
 ## Chapter 7: Regularization for Deep Learning p. 221
-* simply defined, regularization is any technique or process that allows one to reduce test (or maybe verification) error while recognizing that will trade off with *increasing* training error.
+* simply defined, regularization is any technique or process that allows the **reduction of test error** (aka *generalization error* see notes on Chapter 5) while accepting some increase in training error.
 * See also Chapter 5 of ISL (Introduction to Statistical Learning 2021 by Tibshirani et al). PDF available in Box
 * GBC Chapter 7 is all about Regularization
 * See also quick overview of Regularization concepts in GBC Section 5.2.2, such as very basic treatment of "generalization, underfitting, overfitting, bias, variance, and regularization." p. 221
