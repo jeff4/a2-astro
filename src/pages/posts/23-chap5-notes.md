@@ -39,13 +39,51 @@ tags: []
 * The factors determining how well a machine learning algorithm will perform are its ability to:
 	1. Make the training error *small*
 	1. Make the gap between training error and test error (generalization error) *small*
-* Factor one: make the training error too large = underfitting
-* Factor two: make the gap between training and test error too large = overfitting
+* More on factors
+	* Factor one: make the training error too large = underfitting
+	* Factor two: make the gap between training and test error too large = overfitting
+#### Model Capacity
+* p. 109 We can control whether a model is more likely to overfit or underfit by altering the **capacity**. Loosely defined, a model's capacity is its ability to fit a wide variety of functions.
+	* Models with low capacity may struggle to fit the training set.
+	* Models with high capacity can overfit by memorizing properties of the training set that do not serve them well in the test set, thereby having higher than desired generatlization error.
+* One way ot control the capacity of a learning algorithm is by choosing its **hypothesis space**. 
+	* i.e., the set of functions that the learning algorithm is allowed to select as being the solution.
+	* e.g., the linear regression algorithm has as its hypothesis space the set of all linear functions. To increase this model's capacity, we can expand the hypothesis space to include all polynomial functions as well. 
+* Choice of model / hypothesis space is not the only way to expand capacity. Note the difference between **effective capacity** and **representational capacity** as shown between p. 110 and 111.
+* p.111 VC dimension aka **Vapnik-Chervonenkis dimension** measures the capacity of a binary classifer.
+* p.112 chart on difference between Training Error and Generalization Error. 
 
+### 5.2.1 The No Free Lunch Theorem
+* p.113 Wolpert 1996 proved the 'no free lunch theorem for machine learning' which states that, averaged over all possible data-generating distributions, every classification algorithm has the same error rate when classifyig previously unobserved points.
+	* i.e., no ML algorithm is universally better than any other.
+	* The most sophisticated algorithm we can concieve of us has the same avg performance (over all possible tasks) as merely predicting that every point belongs to the same class.
+* p.115 Fortunately, these results hold only when we average over *all* possible data-generating distributions. If we make some assumptions about the kinds of probability distributions we encounter in the real world, then we can design learning algorithms that peform well on those particular distributions.
+*  This means that the goal of machine learning research is not to seek a universal learning algorithm or the absolute best learning algorithm. Instead, our goal is to understand what kinds of distributions are relevant to the “real world” that an AI agent experiences, and what kinds of machine learning algorithms perform well on data drawn from the kinds of data-generating distributions we care about.
 
-* p. 112 chart on difference between Training Error and Generalization Error. 
-#### 5.2.1 No Free Lunch Theorem
+### 5.2.1 Regularization
+* p.115 The only method for modifying a learning algorithm discussed so far is by increasing or decreasing a model's representational capacity by increasing or decreasing the size of the hypothesis space from which we choose the "best" function. i.e., by adding or removing more and fewer functions from the set of possible solutions.
+* However, the representational capacity of a model can be changed not only by the raw size of the hypothesis space, but also by the weighting or preference we give to certain types of functions contained in that space.
+* For example, we can put our thumb on the scale such that our ML algorithm 'prefers' polynomial functions versus linear functions. In that case, if a polynomial and a linear function are both eligible to solve our problem, the linear function will be chosen only if the linear function fits the training data significantly more than the closest polynomial function does.
+* Example of using **weight decay**. Assume we want to minimize the objective function J(w&#8407;) where J() = Mean Squared Error for training + preference for weights to have a smaller L<sup>2</sup> norm. See Equation 5.18 on p.116. 
+	* When &#955; = 0, we impose no preference. 
+	* As &#955; gets larger, it forces weights to become smaller.
+* More generally, we can regularize a model that learns a function f(**x**&#8407;;**&#952;**) by adding a penalty called a **regularizer** to the cost function. In the case of weight decay above, the regularizer is omega(w&#8407;) = w&#8407;<sup>T</sup>w&#8407;. Essentially everything except for the &#955; lambda scalar multiplier.
+* Expressing preferences for one function over another is a 'gentler' more general way of controlling a model's capacity than 'violently' including or excluding functions from a hypothesis space. We can think of excluding a function from a hypothesis space as expressing an infinitely strong preference against that function.
+* p.117 The philosophy of deep learning is that for a wide range of tasks–and indeed all intellectual tasks that people can do–may all be solved effectively using very general-purpose forms of regularization.
+
 ### 5.3 Hyperparameters and Validation Size
+* Most ML algos have hyperparamters aka settings that we use to control the algorithm's behavior. The values of hyperparameters are *not* adjusted via the learning algorithm itself.
+* Of course, we can have a nested learning procedure whereby one ML algorithm learns the best hyperparameters for another ML algorithm.
+* The polynomial regression example in Figure 5.2 on p.110 has as single hyperparamter: the degree of the polynomial which acts as a capacity hyperparamter.
+
+
+
+
+
+
+
+
+
 ### 5.4 Estimators, Bias, and Variance
 ### 5.5 Maximum Likelihood Estimation
 ### 5.6 Bayesian Statistics
