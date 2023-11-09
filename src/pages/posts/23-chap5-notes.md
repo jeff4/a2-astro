@@ -75,7 +75,25 @@ tags: []
 * Most ML algos have hyperparamters aka settings that we use to control the algorithm's behavior. The values of hyperparameters are *not* adjusted via the learning algorithm itself.
 * Of course, we can have a nested learning procedure whereby one ML algorithm learns the best hyperparameters for another ML algorithm.
 * The polynomial regression example in Figure 5.2 on p.110 has as single hyperparamter: the degree of the polynomial which acts as a capacity hyperparamter.
+* p.118 Sometimes a setting is considered a hyperparameter because it is just too difficult to optimize; i.e., the learning algorithm doesn't have a path to improve it over time. 
+* More frequently, a setting is considered a hyperparameter b/c it's not appropriate to learn that hyperparameter in the training set. 
+	* This applies to all hyperparameters that control model capacity.
+	* If a setting that managed model capacity was learned on the training set, **that setting would always choose the maximum possible model capacity** aka always resulting in overfitting.
+	* For example, we can always ﬁt the training set better with a higher-degree polynomial and a weight decay setting of λ= 0 than we could witha lower-degree polynomial and a positive weight decay setting.
 
+#### Validation Set
+* This helps solve the problem of overfitting.
+* Before, we discussed how a held-out test set, composed of examples coming from the same distribution as the training set, can be used to estimate the generalization error of a learner, after the learning process has completed. 
+* It is important that the test examples are not used in any way to make choices about the model, including its hyperparameters. 
+* **For this reason, no example from the test set can be used in the validation set.** Therefore, we always construct the validation set from the *training* data. 
+	* i.e., **these 3 datasets are unique and disjoint: (1) training set, (2) validation set, and (3) test set.**
+* Speciﬁcally, we split the training data into two disjoint subsets. One of these subsets is used to learn the parameters. 
+* The other subset is our validation set, used to estimate the generalization error during or after training,allowing for the hyperparameters to be updated accordingly. The subset of dataused to learn the parameters is still typically called the training set, even though this may be confused with the larger pool of data used for the entire training process. 
+* The subset of data used to guide the selection of hyperparameters is called the validation set. 
+* Typically, one uses about 80 percent of the training data for training and 20 percent for validation. 
+* Since the validation set is used to “train” the hyperparameters, the validation set error will underestimate thegeneralization error, though typically by a smaller amount than the training errordoes. 
+* After all hyperparameter optimization is complete, the generalization errormay be estimated using the test set.
+* Note that validation set is a subset of the original training set. e.g., if there are 100 examples in the original training set pre-segregation, we might reserve 80 examples for the post-segregration new training set for actual training. And the remaining 20 examples will be used for the validation set.
 
 
 
