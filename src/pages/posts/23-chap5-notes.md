@@ -93,16 +93,43 @@ tags: []
 * Typically, one uses about 80 percent of the training data for training and 20 percent for validation. 
 * Since the validation set is used to “train” the hyperparameters, the validation set error will underestimate thegeneralization error, though typically by a smaller amount than the training errordoes. 
 * After all hyperparameter optimization is complete, the generalization errormay be estimated using the test set.
-* Note that validation set is a subset of the original training set. e.g., if there are 100 examples in the original training set pre-segregation, we might reserve 80 examples for the post-segregration new training set for actual training. And the remaining 20 examples will be used for the validation set.
+* JH: Note that validation set is a subset of the original training set. e.g., if there are 100 examples in the original training set pre-segregation, we might reserve 80 examples for the post-segregration new training set for actual training. And the remaining 20 examples will be used for the validation set.
+* p.118 In practice, when the same test set has been used repeatedly to evaluate performance of different algorithms over many years, and especially if we consider all the attempts from the scientiﬁc community at beating the reported state-of-the-art performance on that test set, we end up having optimistic evaluations with the test set as well. 
+* Benchmarks can thus become stale and then do not reﬂect the true ﬁeld performance of a trained system. Thankfully, the community tends to move on to new (and usually more ambitious and larger) benchmark datasets.
 
-
-
-
-
-
+#### 5.3.1 Cross-validation
+* If your original dataset has 100,000s of examples, don't really worry about how you split it into training, validation, and test datasets.
+* However, if your original pool of data is too small, it's hard to prove good generalizability. This is when alternative procedures let one use all the examples in the estimation of the mean test error at the price of increased computational cost.
+	* These procedures are based on the idea of repeating the training and test computation on different randomely chosen subsets or splits in the original dataset.
+	* The most common of these is the *k*-fold cross-valdiation procedure shown on p.120 (Algorithm 5.1) formed by *k* number of non-overlapping subsets.
+	* This solution is somewhat imperfect see Bengio and Grandvalet (2004), but approximations are still used.
 
 
 ### 5.4 Estimators, Bias, and Variance
+* p.118 The field of statistics provides many tools to not only improve a task during training but to let that algorithm generalize. Let's consider parameter estimation, bias, and variance.
+
+#### 5.4.1 Point Estimation
+* *Point estimation* is the attempt to provide the single 'best' prediction of some quantity of interest. In general, the quantity of interest can be a single parameter of a vector of parameters in some parametric model such as the weights in our linear regression example in section 5.1.4., but it can also be a whole function.
+* A parameter **&#952;** can have a 'point estimate version' denoted with a hat on top aka theta-hat. Just as a unit vector v with a hat on top is called a 'v-hat'.
+* Let { x&#8407;<sub>1</sub>,  x&#8407;<sub>2</sub>,  x&#8407;<sub>3</sub>, ...  x&#8407;<sub>m</sub>} be a set of *m* i.i.d. data points. A *point estimator* is any function `g()` that can take in that list of vectors as input and returns a value **&#952;-hat** 
+* While almost any function qualifies as a point estimator based on the above definition, we are looking for *good* estimators. In that case, we want the output **&#952;-hat** to be close to the true underlying **&#952;**.So only estimator functions that output a reasonable **&#952;-hat** will be considered for our desired point estimator function.
+
+#### Function Estimators
+* Distinguised from point estimators above because we are not trying to just estimate a single point, but an entire function.
+
+
+
+### DELETE BELOW 
+* **&#952;** = theta 
+* **&#952;-hat** = theta-hat 
+* "tp = **&#952;-hat**
+* "p = &#8407; = vector arrow above prior character 
+* function f(**x**&#8407;;**&#952;**) regularizer** to the cost function. In the case of weight decay above, the regularizer is omega(w&#8407;) = w&#8407;<sup>T</sup>w&#8407;. Essentially everything except for the &#955; lambda scalar multiplier.
+
+
+
+
+
 ### 5.5 Maximum Likelihood Estimation
 ### 5.6 Bayesian Statistics
 ### 5.7 Supervised Learning Algorithm
