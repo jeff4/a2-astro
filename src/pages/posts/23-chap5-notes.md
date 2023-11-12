@@ -119,13 +119,19 @@ tags: []
 
 
 
-### DELETE BELOW 
+### DELETE
 * **&#952;** = theta 
 * **&#952;-hat** = theta-hat 
 * "tp = **&#952;-hat**
 * "p = &#8407; = vector arrow above prior character 
 * function f(**x**&#8407;;**&#952;**) regularizer** to the cost function. In the case of weight decay above, the regularizer is omega(w&#8407;) = w&#8407;<sup>T</sup>w&#8407;. Essentially everything except for the &#955; lambda scalar multiplier.
 
+#### 5.4.2 Bias
+#### 5.4.3 Variance aka Standard Error
+* **Variance** = Var(&#952;-hat) 
+* Difference betwen **Bias** from previous section 5.4.2 and **Variance** in this section.
+* &#8730;<span style="text-decoration: overline; text-decoration-thickness: 1.5px"> Variance </span>= *Standard Error* = *SE(&#952;-hat)* 
+    * i.e., *SE<sup>2</sup>* = *SE* * *SE* = the square of *Standard Error* = Variance
 
 
 
