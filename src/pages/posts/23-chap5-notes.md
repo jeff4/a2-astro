@@ -132,11 +132,44 @@ tags: []
 * Difference betwen **Bias** from previous section 5.4.2 and **Variance** in this section.
 * &#8730;<span style="text-decoration: overline; text-decoration-thickness: 1.5px"> Variance </span>= *Standard Error* = *SE(&#952;-hat)* 
     * i.e., *SE<sup>2</sup>* = *SE* * *SE* = the square of *Standard Error* = Variance
+* Explaining *SE<sup>2</sup>* = Variance via Bernoulli Distribution p. 125
+#### 5.4.4 Minimizing Mean Square Error by trading off between Bias and Variance
+* Bias and variance measure two different sources of error in an estimator.
+	* Bias measures the expected deviation from teh true value of the function or parameter.
+	* OTOH, variance provides a measure of the deviation from the expected estimator value *caused specifically* by any particular sampling of the dataset.
+* How do we choose between the tradeoff between bias and variance? See the total generalization error chart on p.127. GenError = BiasError + VarianceError. We can see that Bias steadily decreases as we increase model capacity. By the same token, Variance monotonically increases with model capacity.
+* Therefore, there is a minimum somwhere that is the optimal capacity where the sum of BiasError + VarianceError is the lowest possible at least wrt model capacity 
+* The most common way to negotiatn the tradeoff between Bias and Variance is to use cross-validation.
+	* Empirically, *cross-validation is highly successful in many real-world tasks*. 
+	* Alternatively, we can also compare the MSE (mean squared error) of the estimates. See equations 5.53 and 5.54 on p.126. b/c MSE = Bias<sup>2</sup> + Var, that means that when Var=0, MSE = Bias<sup>2</sup>. Conversely, when Bias<sup>2</sup>=0, then MSE = Var.
+* **Desirable estimators are those with a small MSE**. These are estimators that manage have small overall MSE; i.e., these are estimators that manage to keep both their bias and variance in check.
 
-
-
+#### 5.4.5 Consistency
+* So far, we have only discussed the properties of estimators based on varying model capacity but maintaining the size of the training data set. i.e., fixed training set size.
+* What happens to our estimator when we increase the amt of training data?
+* Recall that the number of data examples = m. As m approaches infinity, we want to design a system st the estimator theta-hat converges on the true value of the underlying datagenerating process theta.
+* The more the above bullet is true, the higher the **consistency**.
+* i.e., If we are very certain that theta-hat converges on theta as m = number of examples grow, then we say there is *strong consistency*.
+* i.e., If we are pretty *uncertain* that theta-hat converges on theta as m = number of examples grow, then we say there is *weak consistency*.
+* Consistency ensures that the bias induced by the estimator diminishes as the number of data exaples grows.
+	* However, *the converse is not true**. asymptotic unbiasedness does *not* imply consistency.
 
 ### 5.5 Maximum Likelihood Estimation
+* How do we choose estimators? We can randomly pick functions and evaluate their MSE, bias, variance, consistency. But is there are more rational way of picking our initial estimator from the beginning??
+* The most common principle is the **Maximum Likelihood Principle**.
+* Review how squaring the maximum likelihood estimator for theta makes a simpler addition sum as opposed to a multiplicative product which is easier to manipulate. (Capital Sigma for sums is better than Capital Pi for products.) p. 128
+* So what is MaxLikelihood really? One interpretation is to view it as minimizing the dissimilarity between the empericial distribution p-hat<sub>data</sub> defined by the training set and model distribution **versus** the degree of dissimilarity between training set and model distribution  as measured by KL divergence.
+* In other words, MaxLikelihood is an attempt to make the model distribution match the empirical distribution p-hat<sub>data</sub>
+
+
+
+
+
+
+
+
+
+
 ### 5.6 Bayesian Statistics
 ### 5.7 Supervised Learning Algorithm
 ### 5.8 Unsupervised Learning Algorithm
