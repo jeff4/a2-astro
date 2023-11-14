@@ -117,15 +117,6 @@ tags: []
 #### Function Estimators
 * Distinguised from point estimators above because we are not trying to just estimate a single point, but an entire function.
 
-
-
-### DELETE
-* **&#952;** = theta 
-* **&#952;-hat** = theta-hat 
-* "tp = **&#952;-hat**
-* "p = &#8407; = vector arrow above prior character 
-* function f(**x**&#8407;;**&#952;**) regularizer** to the cost function. In the case of weight decay above, the regularizer is omega(w&#8407;) = w&#8407;<sup>T</sup>w&#8407;. Essentially everything except for the &#955; lambda scalar multiplier.
-
 #### 5.4.2 Bias
 #### 5.4.3 Variance aka Standard Error
 * **Variance** = Var(&#952;-hat) 
@@ -159,22 +150,112 @@ tags: []
 * The most common principle is the **Maximum Likelihood Principle**.
 * Review how squaring the maximum likelihood estimator for theta makes a simpler addition sum as opposed to a multiplicative product which is easier to manipulate. (Capital Sigma for sums is better than Capital Pi for products.) p. 128
 * So what is MaxLikelihood really? One interpretation is to view it as minimizing the dissimilarity between the empericial distribution p-hat<sub>data</sub> defined by the training set and model distribution **versus** the degree of dissimilarity between training set and model distribution  as measured by KL divergence.
+	* For more on **KL divergence** aka **Kullbeck-Leibler divergence**, see p.72-73 in *Section 3.13 Information Theory*. (Chapter 3 of GBC a review of Probability and Info Theory.)
+* p.129 Minimizing KL divergence corresponds exactly to minimizing the cross-entropy between the distributions. Many authors use the term 'cross-entropy' refer to the negative log-likelihood of a Bernoulli or softmax distribution, *but this is a misnomer*. Any loss consisting of a negative log-likelihood is a cross-entropy between the empirical distributino defined by the training set and the probablity distribution defined by model.
+	* e.g., mean square error (MSE) is the cross-entropy between the empirical distribution and the Gaussian model. 
 * In other words, MaxLikelihood is an attempt to make the model distribution match the empirical distribution p-hat<sub>data</sub>
-
-
-
-
-
-
-
-
-
+* While the optimal **&#952;** is the same regardless of whether we are **maximizing the likelihood** *or* **minimizing the KL divergence**, the values of the objective functions are different.
+	* In software, we often phrase both *maximizing the likelihood* and *minimizing  the KL* as `minimizing the cost function` **J**&#8407; 
+* Given the above terminology, Maximum Likelihood therefore becomes minimization of the **negative log-likelihood (NLL)**, aka minimization of cross-entropy. 
+	* The perspective of maximum likelihood as minimum KL divergence becomes helpful in this ase because the KL divergence has a known minimum value of zero.
+	* The NLL however *can* become negative when x&#8407; is real-valued. 
+#### 5.5.1. Conditional Log-Likelihood and MSE p.129
+* Note that for most supervised learning (aka training with labelled data), the maximum likelihood estimator can be easily generalized to estimate the conditional probabilty that we are looking at the correct output vector y&#8407;, given:
+	1. an input vector x&#8407; 
+	1. the underlying data-generating parameter **&#952;** 
+		* (See p. 119 section 5.4.1 to see initial introduction of parameter **&#952;** and how it is estimated by the point estimator **&#952;-hat**.)
+* See bottom of p.129 for decomposition of arg max, and p.130 for an example of how linear regression can be shown to be a maximum likelihood procedure.
+#### 5.5.2 Properties of Maximum Likelihood
+* p.131 The main appeal of the maximum likelihood estimator is that it can be shown to be the best estimator asymptotically. i.e., the limit as the number of training examples *m* increases to infinity, the more likely the estimator **&#952;-hat<sub>m</sub>** is to converge to the 'true value' of the platonic ideal of the parameter **&#952;**. (see p.127 again)
+* Consistency (see again section 5.4.5 p.126-127)
+* Two required conditions for consistency:
+	1. The true distribution p<sub>data</data> must lie within the model family p<sub>model</sub>(**&#952;**)
+	1. The true distribution p<sub>data</data> must correspond to *one and only one* value of **&#952;**. Otherwise, it will be impossible for the maximum likelihood to recover the correct p<sub>data</data> b/c it cannot distinguish which particular value of **&#952;** was used by the data-generating process.
+* Different estimators can all have the property of consistency *but* still differ in their **statistical efficiency**.
+	* The degree of *statiistical efficiency* is often studied in the **parametric case** focused on the value of a parmeter only, not on the value of an entire function.
+* Thus, for reasons of *consistency* and *efficiency*, maximum likelihood is often considered the preferred estimator to use for machine learning.
 
 ### 5.6 Bayesian Statistics
+* p.132 to 136
+* p. 5.6.1 **Maximum A Posteriori** Estimation *aka* **MAP Estimation** p. 135
+
+
 ### 5.7 Supervised Learning Algorithm
+* p.137 general category of **probability of output y** *p(y)* given the input of input vector x&#8407; as well as the best parameter vector **&#952;** for a parametric family of distributions.
+	* Specific example of how linear regression fits into the above family.
+	* For *k* number of classes, the sum of all the classes' probability needs to add up to 1. For example, assume that matter can only take on 3 phases: solid, liquid, or gas. Then p(solid) + p(liquid) + p(gas) = 1 for a given substance when we are trying to figure out what phase/class a particular compound belongs in given standard temperature and pressure. In this case, k = 3.
+* For a normal Gaussian distribution over real-valued numbers, we parameterize it with the mean value.
+* For a distribution over a binary variable, we have the "squash" the outcome to be between 0 and 1.
+	* One way to do this is to use the logistic sigmoid function. This is called *logistic regression*
+	* There is no closed-form solution to finding the optimal weights of a logistic regression. (we can't simply solve the system of equations the way we could in linear regression.) Instead, for logistic regression, we try to maximize the log-likelihood. 
+	* Another way of saying maximize the log-likelihood is to minimize the NLL (negative log-likelihood) using gradient descent.
+
+#### 5.7.2 Support Vector Machines
+* p.137 One of the most influential approaches to supervised learning is the Support Vector Machine (SVM). See papers from 1992 and 1995 by Boser, Cortes, Vapnik.
+* Similar to logistic regression; BUT different in that it does not output probabilities. Instead, it outputs a class identity.
+* How the kernel trick works. Basically rewrite ML algorithm into dot product / inner products. p.138.
+* Two benefits of the kernel trick:
+	1. Lets ML algortihms learn models that are nonlinear as a function of x&#8407; using convex optimization techniques that are guaranteed to converge.
+	1. The kernel function *k* often admits an implementation that is significantly more computationally efficient than naive base case. 
+* The most commonly used kernel is the **Gaussian kernel**. p.139
+#### Kernel machines p. 139
+* SVMs introduced **the kernel trick** which can be applied to other linear models (not just support vector machines). 
+	*. p.139 The category of algorithms that employ the kernel trick is known as **kernel machines** that use **kernel methods**. See Williams and Rasmussen (1996) and Schölkopf et al (1999) for more.
+* A major drawback to kernel machines is that the cost of evaluating the decision function is linear with the *m* the number of training examples. SVM mitigate this by only learning an alpha vector that contains mostly zeros. Thus classifying a new example only requires evaluating the kernel function for training examples that have a non-zero alpha variable instance. These training examples are called **support vectors**. 
+* Kernel machines also suffer from a high computational cost of training when the dataset is large. Kernel machines with generic kernels struggle to generalize well. For more, see sections 5.9 and 5.11.
+* Kernel machines are really important to the history of deep learning. The modern incarnation of DL was designed to overcome the above limitations of kernel machines.
+* In particular, the modern deep learning renaissance began when Hinton et al (2006) demonstrated that an ANN could outperform the RBF kernel SVM on the MNIST handwriting benchmark. (RBF = radial basis function at the beginning of p.139)
+
+#### 5.7.3 Other Simple Supervised Learning Algorithms
+* p.139-142 KNN = K-Nearest Neighbors and Decision-Trees.
+* p.142 KNN and decision trees have many limitations *but* they are useful learning algorithms when computational resources are constrained.
+* See Murphy *Machine Learning: A Probabilistic Perspective* (2012); Bishop *Pattern Recognition and Machine Learning* (2006); and *Introduction to Statistical Learning* by James, Witten, Hastie, and R. Tibshirani (2021) as good ML textbooks to learn more about traditional supervised learning algorithms.
+
+
 ### 5.8 Unsupervised Learning Algorithm
+* add as needed
+
+#### 5.8.1 Principal Components Analysis
+* PCA
+* add as needed
+
+#### 5.8.2 k-means Clustering
+* add as needed
+
+#### DELETE
+* **&#952;** = theta 
+* **&#952;-hat** = theta-hat 
+* "tp = **&#952;**
+* "hp = **&#952;-hat**
+* "p = &#8407; 
+	 = vector arrow above prior character 
+* function f(**x**&#8407;;**&#952;**) regularizer** to the cost function. In the case of weight decay above, the regularizer is omega(w&#8407;) = w&#8407;<sup>T</sup>w&#8407;. Essentially everything except for the &#955; lambda scalar multiplier.
+
+
+
+
+
+
 ### 5.9 Stochastic Gradient Descent
+* Intro to SGD. Calls back to basic gradient descent algorithm from Section 4.3 (p.79) and deeper dive in Chapter 8.
+
 ### 5.10 Building an ML Algoirthm
+* Nearly all deep learning algorithms can be described as particular instances of a fairly simple recipe where we combine:
+	1. dataset
+	1. cost function
+	1. optimization procedure
+	1. a model
+* For example, the linear regression algorithm combines:
+	1. Dataset of **X**&#8407; and y&#8407; 
+	1. cost function = J(w&#8407;, b) = -Estimate<sub>x,y~p<sub>data</sub></sub>log p<sub>model</sub>(y | x)
+	1. optimization procedure = solving for where the gradient of the cost function J=0 using the normal equations
+	1. model specification = p<sub>model</sub>(y|x) = N(y;**x**&#8407;-transposed**w** + b, 1) 
+* By realizing that we can replace any of these components mostly independently from the others, we can obtain a wide range of algorithms.
+* The cost function typically includes at least one term that causes the learning process to perform statistical estimation.
+	* The most common cost function is the NLL which causes the maximum likelihood estimation.
+* The cost function often also includes some regularization terms. e.g., a weight decay term.
+* If we cahgne the model from linear to non-linear, then most cost functions can no longer be optimized in closed form. This requires us to choose an iterative numerical optimization procedure such as gradient descent.
+
 ### 5.11 Challenges that motivated deep learning
 
 
