@@ -255,23 +255,46 @@ tags: []
 	* The most common cost function is the NLL which causes the maximum likelihood estimation.
 * The cost function often also includes some regularization terms. e.g., a weight decay term.
 * If we cahgne the model from linear to non-linear, then most cost functions can no longer be optimized in closed form. This requires us to choose an iterative numerical optimization procedure such as gradient descent.
+* In some cases, the cost function may be a function that we cannot actually evaluate, for computational reasons. In these cases, we can still approximately minimize it using iterative numerical optimization, as long as we have some way of approximating its gradients.
+* Most machine learning algorithms make use of this recipe, though it may not be immediately obvious. If a machine learning algorithm seems especially unique or hand designed, it can usually be understood as using a special-case optimizer.
+* Some models, such as decision trees andk-means, require special-case optimizers because their cost functions have ﬂat regions that make them inappropriate for minimization by gradient-based optimizers.
+* Recognizing that most machine learning algorithms can be described using this recipe helps to see the diﬀerent algorithms as part of a taxonomy of methods for doing related tasks that work for similar reasons, rather than as a long list of algorithms that each have separate justiﬁcations.
 
 ### 5.11 Challenges that motivated deep learning
+* The simple machine learning algorithms described in this chapter work well on a wide variety of important problems. They have not succeeded, however, in solving the **central problems in AI**, e.g., **(1) recognizing speech** or **(2) recognizing objects.**
+* The development of deep learning was motivated in part by the failure of traditional algorithms to generalize well on such AI tasks.
+* This section is about how the challenge of generalizing to new examples becomes exponentially more diﬃcult when working with high-dimensional data, and how the mechanisms used to achieve generalization in traditional machine learning are insuﬃcient to learn complicated functions in high-dimensional spaces. Such spaces also often impose high computational costs. Deep learning was designed to overcome these and other obstacles.
 
+#### 5.11.1 The Curse of Dimensionaliy
+* Diagram of 1d, 2d, and 3d and associated stastical challenge
+* The more complex aka the higher the number of dimensions the input space has, the harder it is to have enough training examples to capture the true underlying probability distribution.
+	* Consider the 1d version of the input space. When we try to generalize to a new datapoint within that input space, we can usually tell what to do simpyly by inspecting the training examples that already lie in that 1-d cell; presumably, there are enough examples within that cell or nearby to give us a good probability density.
+	* Here are some examples:
+		* **Classification task:** Return the most common class of training examples in that cell (e.g., 'dog' vs. 'cat').
+		* **Estimating the probability density task:** Estimating the probability density at location x&#8407; just requires us to retrain a fraction. Numerator = number of training examples in that grid cell. Denominator = total number of training in the entire training data set.  
+		* **Regression task:** Average the target values observed over the examples within that grid cell.
+	* But what about when we have high-dimensional spaces; not just 3d, but n-dimensional? In these cases, the number of grid locations is massive--much larger than the number of examples in our training dataset.
+	* Many traditional ML algorithms simply assume that th eoutput of a new point should be approximately teh same as the output at the nearest training point.
 
+#### 5.11.2 Local Constancy and Smoothness Regularization
+* To generalize well, ML algorithms need to be guided by prior beliefs about what kind of function they should learn. 
+* We have seen these priors incorporated as explicit beliefs in the form of probability distributions over parameters of the model. 
+* More informally, we may also discuss prior beliefs as directly inﬂuencing the function itself and inﬂuencing the parameters only indirectly, as a result of the relationship between the parameters and the function. 
+* Additionally, we informally discuss prior beliefs as being expressed implicitly by choosing algorithms that are biased toward choosing some class of functions over another, even though these biases may not be expressed (or even be possible to express) in terms of aprobability distribution representing our degree of belief in various functions.
+* Among the most widely used of these implicit *priors* is **the smoothness prior** *aka* **the local constancy prior**.
+	* This prior assumes that the function we are learning does not change within a small region. (like manifolds?)
+	* We explain below why the smoothness prior by itself is insufficient for many ML goals.
+* Refer to Equation 5.103 (p.154). f<sup>\*</sup>(x&#8407;) &#8776; f<sup>\*</sup>(x&#8407; + **&#949;**)
+* Eq. 5.103 shows a function that is smooth aka locally constant, for most configurations of x&#8407; and a small change **&#949;**. In other words, if we know a good answer for input x&#8407; then that answer is probably good in the neighborhood of x&#8407; (e.g., if x&#8407; is a labelled training example). 
+* If we have several good answers in some neighborhood, we would combine them (by some form of averaging or interpolation) to produce an answer that agrees with as many of them as much as possible.
+* An extreme example of the local constancy approach is the *k*-nearest neighbors family of learning algorithms. These predictors are literally constant over each region containing all the points x&#8407;  that have the same set of *k*-nearest neighbors in the training set. For *k* = 1, the number of distinguishable regions cannot be more than the number of training examples.
+* While the *k*-nearest neighbors algorithm copies the output from nearby training examples, most kernel machines interpolate between training set outputs associated with nearby training examples.
+* An important class of kernels is the family of **local kernels**, where **k (** u&#8407; , v&#8407; **)** has a large value when  u&#8407; and v&#8407; are similar or equal. But the further away u&#8407; and v&#8407; are from each other, the lower the value of k(). 
+* A local kernel can be thought of as a similarity function that performs *template matching*, by measuring how closely a test example x&#8407; resembles each training example **x&#8407; <sup>(i)</sup>**. 
+* Much of the modern motivation for deeplearning is derived from studying the limitations of local template matching andhow deep models are able to succeed in cases where local template matching fails. See Bengio, Delalleau, and Le Roux 2006 'The curse of highly variable functions for local kernel machines.' 
 
-
-
-
-
-
-
-
-
-
-
-
-
+#### Decision trees
+* Decision trees also suﬀer from the limitations of exclusively smoothness-based learning, because they break the input space into as many regions as there are leaves and use a separate parameter (or sometimes many parameters for extensions of decision trees) in each region. If the target function requires a tree with at least *n* leaves to be represented accurately, then at least *n* training examples are required to ﬁt the tree. A multiple of *n* is needed to achieve some level of statistical conﬁdence in the predicted output. 
 
 
 
