@@ -222,18 +222,6 @@ tags: []
 #### 5.8.2 k-means Clustering
 * add as needed
 
-#### DELETE
-* **&#952;** = theta 
-* **&#952;-hat** = theta-hat 
-* "tp = **&#952;**
-* "hp = **&#952;-hat**
-* "p = &#8407; 
-	 = vector arrow above prior character 
-* function f(**x**&#8407;;**&#952;**) regularizer** to the cost function. In the case of weight decay above, the regularizer is omega(w&#8407;) = w&#8407;<sup>T</sup>w&#8407;. Essentially everything except for the &#955; lambda scalar multiplier.
-
-
-
-
 
 
 ### 5.9 Stochastic Gradient Descent
@@ -293,10 +281,79 @@ tags: []
 * A local kernel can be thought of as a similarity function that performs *template matching*, by measuring how closely a test example x&#8407; resembles each training example **x&#8407; <sup>(i)</sup>**. 
 * Much of the modern motivation for deeplearning is derived from studying the limitations of local template matching andhow deep models are able to succeed in cases where local template matching fails. See Bengio, Delalleau, and Le Roux 2006 'The curse of highly variable functions for local kernel machines.' 
 
-#### Decision trees
-* Decision trees also suﬀer from the limitations of exclusively smoothness-based learning, because they break the input space into as many regions as there are leaves and use a separate parameter (or sometimes many parameters for extensions of decision trees) in each region. If the target function requires a tree with at least *n* leaves to be represented accurately, then at least *n* training examples are required to ﬁt the tree. A multiple of *n* is needed to achieve some level of statistical conﬁdence in the predicted output. 
+#### Decision trees and local constancy / smoothness regularization
+* p.153. Decision trees also suﬀer from the limitations of exclusively smoothness-based learning, because they break the input space into as many regions as there are leaves and use a separate parameter (or sometimes many parameters for extensions of decision trees) in each region. 
+* p.154 If the target function requires a tree with at least *n* leaves to be represented accurately, then at least *n* training examples are required to ﬁt the tree. A multiple of *n* is needed to achieve some level of statistical conﬁdence in the predicted output. 
+* In general, to distinguish `O(k)` regions in input space, all the above methods require `O(k)` examples. Typically, there are `O(k)` paramters, with `O(1)` parameters associated with each of the `O(k)` regions. The nearest neighbor scenario, in which each training example can be used to define at most region. See Fig 5.10 on p.154.
+* Is there a way to represent a complex function that has many more regions to be distinguished than the number of training examples? Clearly, assuming only smoothness of the underlying function will not allow a learner to do that. 
+	* For example, imagine that the target function is a kind of checkerboard. A checkerboardcontains many variations, but there is a simple structure to them. 
+	* Imagine what happens when the number of training examples is substantially smaller than the number of black and white squares on the checkerboard. Based on only local generalization and the smoothness or local constancy prior, the learner would be guaranteed to correctly guess the color of a new point if it lay within the same checkerboard square as a training example. 
+	* There is no guarantee, however, that the learner could correctly extend the checkerboard pattern to points lying in squares that do not contain training examples. 
+	* With this prior alone, the only information that an example tells us is the color of its square, and the only way to get the colors of the entire checkerboard right is to cover each of its cells with at least one example.
+* p.155 The smoothness assumption and the associated nonparametric learning algorithms work extremely well as long as there are enough examples for the learning algorithm to observe high points on most peaks and low points on most valleys of the true underlying function to be learned. 
+* This is generally true when the function to be learned is smooth enough and varies in few enough dimensions. In high dimensions, even a very smooth function can change smoothly but in a diﬀerent way along each dimension. 
+* If the function additionally behaves diﬀerently in various regions, it can become extremely complicated to describe with a set oftraining examples. If the function is complicated--we want to distinguish a huge number of regions compared to the number of examples--is there any hope to generalize well?
+* The answer to both of these questions--whether it is possible to represent a complicated function eﬃciently, and whether it is possible for the estimated function to generalize well to new inputs--is yes.
+* The key insight is that a very large number of regions, such as *O(2<sup>k</sup>)*, can be defined with *O(k) examples, so long as we introduce some dependencies between the regions through additional assumptions about the underlying data-generating distribution.
+* In this way, we can actually generalize nonlocally. See Bengio and Monperrus (2005) and Bengio, Larochelle, and Vincent (2006) 'Non-local manifold Parzen windows'
+* Many different deep learning algorithms provide implicit or explicit assumptions that are reasonable for a broad ranger of AI tasks in order to capture these advantages.
+* p.155 Other approaches to machine learning often make stronger, task-specific assumptions.
+	* For example, we could easily solve the checkerboard task by providing the assumptino that the target function is periodic.
+	* Usually we do not include such strong, task-specific assumptions in neural networks so that they can generalize to a much wider variety of structures.
+* AI tasks have structure that is much too complex to be limited to simple, manually specified properties such as periodicity, so we want learning algorithms that embody more general-purpose assumptions. 
+* The core idea in deep learning is that we assume that the data was generated by the *composition of factors*, or features, potentially at multiple levels in a hierarchy.
+* Many other similarly generic assumptions can further improve deep learning algorithms. These apparently mild assumptions allow an exponential gain in the relationship between the number of examples and teh number of regions that can be distinguished.
+* We describe these exponential gains more precisely in sections 6.4.1, 15.4, and 15.5. 
+* The exponential advantages conferred by the use of deep distributed representations counter the exponential challenges posed by the curse of dimensionality.
+
+#### Manifold Learning
+* p.156 An important concept underlying many ideas in ML is that of a **manifold**.
+* A manifold is a connected region. Mathematically, it is a set of points associated with a neighborhood around each point. From any given point, the manifold locally appears to be a Euclidean space. 
+	* e.g., In everyday life, we experience the surface of the world as a 2-D plane, but it is in fact a spherical manifold in3-D space.
+* The concept of a neighborhood surrounding each point implies the existence of transformations that can be applied to move on the manifold from one position to a neighboring one. 
+	* In the example of the world’s surface as a manifold, one can walk north, south, east, or west.
+* Although there is a formal mathematical meaning to the term “manifold,” in machine learning it tends to be used more loosely to designate a connected set of points that can be approximated well by considering only a small number of degrees of freedom aka dimensions embedded in a higher-dimensional space.
+* Each dimension corresponds to a local direction of variation. 
+	* See ﬁgure 5.11 for an example of training data lying near a one-dimensional manifold embedded in two-dimensional space. * In the context of machine learning, we allow the dimensionality of the manifold to vary from one point to another. This often happens when a manifold intersects itself. 
+	* For example, a ﬁgure eight is a manifold that has a single dimension in most places but two dimensions at the intersection at the center.
+* Many ml problems seem hopeless if we expect the algorithm to learn functions with interesting variations across all of &#8477;<sup>n</sup>. *But...*
+* *...**Manifold Learning** algorithms surmount this obstacle!* 
+* These algorithms succeed by assuming that most of &#8477;<sup>n</sup> consists of invalid inputs, and that interesting inputs occur only along a collection of manifolds containing a small subset of points--with interesting variations in the output of the learned function occurring only along directions that lie on the manifold, or with interesting variations happening only when we move from manifold 1 to manifold 2, etc.
+* Manifold Learning was introduced in the case of continuous-valued data and in the unsupervised learning setting. However, this idea has been generalized to both discrete data and in supervised learning settings.
+	* p.157 The key point for effective manifold learning is that the probability mass is highly concentrated.
+* The assumption that data lies along a low-dimensional manifold may not always be correct or useful. However, GBC argue that in the context of AI tasks--involving processing images, sounds, text--the manifold assumption is at least a good starting point or approximately correct.
+
+##### Two reasons that suggest that the manifold hypothesis (referred to as the manifold assumption above) is reasonable
+
+1. The first observation in favor of the **manifold hypothesis** is that the probability distribution over images, text strings, and sounds that occur in real life is highly concentrated.
+	* Uniform noise essentially never resembles structured inputs from these domains. Figure 5.12 (p.158) shows how uniformly sampled points look like the patterns of static that appear on analog television sets when no signal is available. 
+	* Similarly, if you generate a document by picking letters uniformly at random, what is the probability that you will get a meaningful English-language text? Almost zero!... 
+	* ...because most of the long sequences of letters do not correspond to a natural language sequence: the distribution of natural language sequences occupies a very little volume in the total space of sequences of letters.  
+	* Of course, concentrated probability distributions are not suﬃcient to show that the data lies on a reasonably small number of manifolds. 
+	* We must also establish that the examples we encounter are connected to each other by other examples--with each example surrounded by other highly similar examples that can be reached by applying transformations to traverse the manifold. 
+1. The second argument in favor of the manifold hypothesis is that we can imagine such neighborhoods and transformations, at least informally. 
+	* In the case of images, we can certainly think of many possible transformations that allow us to trace out a manifold in image space: we can gradually dim or brighten the lights, gradually move or rotate objects in the image, gradually alter the colors on the surfaces of objects, and so forth. 
+	* Multiple manifolds are likely involved in most applications. For example,the manifold of human face images may not be connected to the manifold of catface images.
+	* These thought experiments convey some intuitive reasons supporting the manifold hypothesis.
+	* More rigorous experiments clearly support the hypothesis for a large class of datasets of interest in AI. See list of papers on p.159 from 1998-2010.
+
+##### Conclusion to Manifold Learning section
+* When the data lies on a low-dimensional manifold, it can be most natural for ML algorithms to represent the data in terms of coordinates on the manifold, rather than in terms of coordinates in &#8477;<sup>n</sup>. 
+* In everyday life, we can think of roads as 1-D manifolds embedded in 3-D space. We give directions to speciﬁc addresses in terms of address numbers along these 1-D roads, not in terms of coordinates in 3-D space. 
+* Extracting these manifold coordinates is challenging but holds the promise of improving many machine learning algorithms. 
+* This general principle is applied in many contexts. 
+* Figure 5.13 shows the manifold structure of a dataset consisting of faces. By the end of this book, we will have developed the methods necessary to learn such a manifold structure. In ﬁgure 20.6, we will see how a machine learning algorithm can successfully accomplish this goal.
+* Conclusion to intro section on math and basic machine learning. Now that Chapter 5 is finished, let's turn to **Chapter 6: FF Networks**, which is when we will begin the study of deep learning proper.
 
 
 
+
+
+
+##### Double-struck R for Real numbers
+* "rp = double-struck R = &#8477; 
+* "tp = theta = **&#952;**
+* "hp = theta-hat = **&#952;-hat**
+* "pp = vector arrow above prior character = &#8407; 
 
 
