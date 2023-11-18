@@ -332,7 +332,7 @@ tags: []
 * We describe these exponential gains more precisely in sections 6.4.1, 15.4, and 15.5. 
 * The exponential advantages conferred by the use of deep distributed representations counter the exponential challenges posed by the curse of dimensionality.
 
-#### Manifold Learning
+#### 5.11.3 Manifold Learning
 * p.156 An important concept underlying many ideas in ML is that of a **manifold**.
 * A manifold is a connected region. Mathematically, it is a set of points associated with a neighborhood around each point. From any given point, the manifold locally appears to be a Euclidean space. 
 	* e.g., In everyday life, we experience the surface of the world as a 2-D plane, but it is in fact a spherical manifold in3-D space.
@@ -369,7 +369,9 @@ tags: []
 * Extracting these manifold coordinates is challenging but holds the promise of improving many machine learning algorithms. 
 * This general principle is applied in many contexts. 
 * Figure 5.13 shows the manifold structure of a dataset consisting of faces. By the end of this book, we will have developed the methods necessary to learn such a manifold structure. In ﬁgure 20.6, we will see how a machine learning algorithm can successfully accomplish this goal.
-* Conclusion to intro section on math and basic machine learning. Now that Chapter 5 is finished, let's turn to **Chapter 6: FF Networks**, which is when we will begin the study of deep learning proper.
+***
+### 5.12 Conclusion
+* Now that Chapter 5 is finished, let's turn to **Chapter 6: FF Networks**, which is when we will begin the study of deep learning proper.
 
 
 
