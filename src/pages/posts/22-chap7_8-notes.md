@@ -10,7 +10,6 @@ image:
 tags: []
 ---
 
-
 **Deep Learning (2016)** 
 * Ian Goodfellow, Yoshua Bengio, and Aaron Courville
 * GBC
@@ -34,9 +33,8 @@ tags: []
 * Whatever the case, it is fortunate that CNNs performed well decades ago. **In many ways, CNNs carried the torch for the rest of deep learning** [during the lean years of the ANN winter]. And then, CNNs paved the way to the acceptance of neural networks in general.
 
 ## Chapter 7: Regularization for Deep Learning p. 221
-* simply defined, regularization is any technique or process that allows the **reduction of test error** (aka *generalization error* see notes on Chapter 5) while accepting some increase in training error.
+* Simply defined, regularization is any technique or process that allows the **reduction of test error** (aka *generalization error* see notes on Chapter 5) while accepting some increase in training error.
 * See also Chapter 5 of ISL (Introduction to Statistical Learning 2021 by Tibshirani et al). PDF available in Box
-* GBC Chapter 7 is all about Regularization
 * See also quick overview of Regularization concepts in GBC Section 5.2.2, such as very basic treatment of "generalization, underfitting, overfitting, bias, variance, and regularization." p. 221
 	* On GBC p. 107 note that '**generalization error** is exactly synonymous with **test error**' from first page of Section 5.2
 * 'Regularization adds terms to the objective function which can be thought of as extra constraints and penalities.
@@ -53,6 +51,24 @@ tags: []
 	1. *Including* the true data-generating process *but* also matching many other generating processes (aka *overfitting*)
 		* In this overfitting regime, variance rather than bias dominates the estimation error
 * The goal of regularization is to move from the 3rd regime above to the 2nd regime.
+* Some archaelogy. **J() = objective function**. From GBC p.79, synonyms for objective function include:
+	* **cost function**
+	* **loss function**
+	* **error function**
+* Also from p.79, "We often denote the value that minimizes or maximizes a function with a superscript *. For example, we might say x&#8407;<sup>\*</sup> = arg min f(x&#8407;)." i.e., x&#8407; refers to when f'(x&#8407;) = 0 and there is a minimum in the derivative df/dx.  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Chapter 8: Optimization for Training Deep Models p. 267
 * GBC Chapter 8, section 8.3 is on Stochastic Gradient Descent (SGD)

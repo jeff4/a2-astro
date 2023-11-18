@@ -52,8 +52,33 @@ tags: []
 * Choice of model / hypothesis space is not the only way to expand capacity. Note the difference between **effective capacity** and **representational capacity** as shown between p. 110 and 111.
 * p.111 VC dimension aka **Vapnik-Chervonenkis dimension** measures the capacity of a binary classifer.
 * p.112 chart on difference between Training Error and Generalization Error. 
+##### Non-parametric models
+* p.111-112 To reach the most extreme case of arbitrarily high capacity, we introduce the concept of **non-parametric models**.
+	* So far we have only seen **parametric models** such as linear regression.
+	* Parametric models learn functions that can be expressed by a vector of parameters whose size is *fixed* and *finite* **before any data is observed.**
+	* In contrast, a non-parametric model need not have a vector of fixed size before data observation
+* Sometimes, non-parametric models are just theoretical abstractions that cannot be implemented in practice. e.g., an algorith that searches over all possible probability distributions.
+* However, we can also design practical nonparametric models by making their complexity a function of the training set size.
+	* one example: **nearest neighbor regression**. Unlike linear regression, which has a fixed-length vector of weights, the nearest neighbor regression model simply stores the **X** and y&#8407; from the training set. *
+		* When asked to classify a test point x&#8407; the model looks up the nearest entry in the training set and returns the associated regression target.
+		* In other words, y-hat = y<sub>i</sub> where i = arg min (*L<sup>2</sup>* norm).
+	* the nearest neighbor regression algorithm above can be generalized to distance metrics other than the *L<sup>2</sup>* norm. e.g., learned distance metrics--See Goldberger et al 2005.
+* Finally, we can create a non-parametric learning algorithm by wrapping a parametric learning algorithm inside another algorithm that increases the number of parameters needed.
+	* e.g., we could imagine an outer loop of learning that changes the degree of the polynomial learned by linear regression on top of a polynomial expansion o the input.
+* p.113 The ideal model is an oracle that simply knows the true probability distribution that generates the data. Even such a model will still incur some error on many problems because there may be some noise in the distribution.
+* p. 113 Training and generalization error vary as the size of the training set varies.
+	* Expected generalization error can never increase as the number of training examples increases.
+* For non-parametric models, more data yield better generalization until the best possible error is achieved.
+* Any fixed parametric model with less than optimal capacity will asymptote to an error value that exceeds the Bayes Error. (From earlier on this page [p.113], *Bayes error* = the error incurred by an oracle making predictions from the true distribution p(**x**,y).)
+* Note: it is possible for the model to have optimal capacity and yet still have a large gap between training and generalization errors. In this case, we may be able to reduce the gap by adding more examples to the training dataset.
 
-### 5.2.1 The No Free Lunch Theorem
+
+
+
+
+
+
+###.2.1 The No Free Lunch Theorem
 * p.113 Wolpert 1996 proved the 'no free lunch theorem for machine learning' which states that, averaged over all possible data-generating distributions, every classification algorithm has the same error rate when classifyig previously unobserved points.
 	* i.e., no ML algorithm is universally better than any other.
 	* The most sophisticated algorithm we can concieve of us has the same avg performance (over all possible tasks) as merely predicting that every point belongs to the same class.
