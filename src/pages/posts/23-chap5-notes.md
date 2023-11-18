@@ -11,6 +11,8 @@ tags: []
 ---
 
 ## Deep Learning (GBC) Chapter 5
+* [Link](https://www.deeplearningbook.org) to main Goodfellow, Bengio, Courville textbook site.
+* [Direct link](https://www.deeplearningbook.org/contents/ml.html) to PDF copy of Chapter 5.
 ### 5.1 Learning Algorithms
 * Section 5.1.1 - The Task *T* can be many things: classification, classification with missing errors, regression, transcription, machine translation, structured output, anomaly detection, synthesis/sampling, imputation of missing values, denoising, density estimation *aka* probability mass function estimation.
 * Section 5.1.2 - The Performance Measure *P*. Accuracy + Error Rate = 1.0
