@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Goodfellow (GBC) Chapter 5'
+title: 'GBC Chapter 5'
 pubDate: 2023-11-11
-description: 'Quick review of ML basics esp. statistics and related math'
+description: 'Review of pre-2006 ML before DNNs and Deep Belief Networks'
 author: 'Jeff'
 image:
     url: ""
@@ -10,11 +10,7 @@ image:
 tags: []
 ---
 
-
-**Deep Learning (2016)** 
-* Ian Goodfellow, Yoshua Bengio, and Aaron Courville
-* GBC
-## Chapter 5
+## Deep Learning (GBC) Chapter 5
 ### 5.1 Learning Algorithms
 * Section 5.1.1 - The Task *T* can be many things: classification, classification with missing errors, regression, transcription, machine translation, structured output, anomaly detection, synthesis/sampling, imputation of missing values, denoising, density estimation *aka* probability mass function estimation.
 * Section 5.1.2 - The Performance Measure *P*. Accuracy + Error Rate = 1.0
@@ -25,6 +21,7 @@ tags: []
 	* p. 103. Concept of **design matrix** which is just an object to hold many examples at once. Eg., if there are 150 plants each of which has 4 features, then you can hold that in a matrix of 4 columns and 150 rows of plants (the famous Iris leaf dataset)
 * 5.1.4 - Example of Linear Regression and trying to reduce the MSE (Mean Squared Error)
 	* Not just about y = **wx**, but also with the bias parameter: y = **wx** + b for the 'y-intercept'.
+***
 ### 5.2 Capacity, Overfitting, and Underfitting
 * p. 107 'Again we want to reduce the *training error*; so far what we have described is just an optimization problem like in linear regression.'
 * '**Critical point** What separates machine learning from vanilla optimization is that we want the **test error* *aka* the **generalization error** to be reduced as well.
@@ -73,19 +70,14 @@ tags: []
 * Note: it is possible for the model to have optimal capacity and yet still have a large gap between training and generalization errors. In this case, we may be able to reduce the gap by adding more examples to the training dataset.
 
 
-
-
-
-
-
-###.2.1 The No Free Lunch Theorem
+### 5.2.1 The No Free Lunch Theorem
 * p.113 Wolpert 1996 proved the 'no free lunch theorem for machine learning' which states that, averaged over all possible data-generating distributions, every classification algorithm has the same error rate when classifyig previously unobserved points.
 	* i.e., no ML algorithm is universally better than any other.
 	* The most sophisticated algorithm we can concieve of us has the same avg performance (over all possible tasks) as merely predicting that every point belongs to the same class.
 * p.115 Fortunately, these results hold only when we average over *all* possible data-generating distributions. If we make some assumptions about the kinds of probability distributions we encounter in the real world, then we can design learning algorithms that peform well on those particular distributions.
 *  This means that the goal of machine learning research is not to seek a universal learning algorithm or the absolute best learning algorithm. Instead, our goal is to understand what kinds of distributions are relevant to the “real world” that an AI agent experiences, and what kinds of machine learning algorithms perform well on data drawn from the kinds of data-generating distributions we care about.
 
-### 5.2.1 Regularization
+### 5.2.2 Regularization
 * p.115 The only method for modifying a learning algorithm discussed so far is by increasing or decreasing a model's representational capacity by increasing or decreasing the size of the hypothesis space from which we choose the "best" function. i.e., by adding or removing more and fewer functions from the set of possible solutions.
 * However, the representational capacity of a model can be changed not only by the raw size of the hypothesis space, but also by the weighting or preference we give to certain types of functions contained in that space.
 * For example, we can put our thumb on the scale such that our ML algorithm 'prefers' polynomial functions versus linear functions. In that case, if a polynomial and a linear function are both eligible to solve our problem, the linear function will be chosen only if the linear function fits the training data significantly more than the closest polynomial function does.
@@ -96,6 +88,7 @@ tags: []
 * Expressing preferences for one function over another is a 'gentler' more general way of controlling a model's capacity than 'violently' including or excluding functions from a hypothesis space. We can think of excluding a function from a hypothesis space as expressing an infinitely strong preference against that function.
 * p.117 The philosophy of deep learning is that for a wide range of tasks–and indeed all intellectual tasks that people can do–may all be solved effectively using very general-purpose forms of regularization.
 
+***
 ### 5.3 Hyperparameters and Validation Size
 * Most ML algos have hyperparamters aka settings that we use to control the algorithm's behavior. The values of hyperparameters are *not* adjusted via the learning algorithm itself.
 * Of course, we can have a nested learning procedure whereby one ML algorithm learns the best hyperparameters for another ML algorithm.
@@ -129,7 +122,7 @@ tags: []
 	* The most common of these is the *k*-fold cross-valdiation procedure shown on p.120 (Algorithm 5.1) formed by *k* number of non-overlapping subsets.
 	* This solution is somewhat imperfect see Bengio and Grandvalet (2004), but approximations are still used.
 
-
+***
 ### 5.4 Estimators, Bias, and Variance
 * p.118 The field of statistics provides many tools to not only improve a task during training but to let that algorithm generalize. Let's consider parameter estimation, bias, and variance.
 
@@ -168,8 +161,9 @@ tags: []
 * i.e., If we are very certain that theta-hat converges on theta as m = number of examples grow, then we say there is *strong consistency*.
 * i.e., If we are pretty *uncertain* that theta-hat converges on theta as m = number of examples grow, then we say there is *weak consistency*.
 * Consistency ensures that the bias induced by the estimator diminishes as the number of data exaples grows.
-	* However, *the converse is not true**. asymptotic unbiasedness does *not* imply consistency.
+	* However, *the converse is not true*; asymptotic unbiasedness does *not* imply consistency.
 
+***
 ### 5.5 Maximum Likelihood Estimation
 * How do we choose estimators? We can randomly pick functions and evaluate their MSE, bias, variance, consistency. But is there are more rational way of picking our initial estimator from the beginning??
 * The most common principle is the **Maximum Likelihood Principle**.
@@ -200,12 +194,14 @@ tags: []
 	* The degree of *statiistical efficiency* is often studied in the **parametric case** focused on the value of a parmeter only, not on the value of an entire function.
 * Thus, for reasons of *consistency* and *efficiency*, maximum likelihood is often considered the preferred estimator to use for machine learning.
 
+***
 ### 5.6 Bayesian Statistics
 * p.132 to 136
 * p. 5.6.1 **Maximum A Posteriori** Estimation *aka* **MAP Estimation** p. 135
 
 
-### 5.7 Supervised Learning Algorithm
+***
+### 5.7 Supervised Learning Algorithms
 * p.137 general category of **probability of output y** *p(y)* given the input of input vector x&#8407; as well as the best parameter vector **&#952;** for a parametric family of distributions.
 	* Specific example of how linear regression fits into the above family.
 	* For *k* number of classes, the sum of all the classes' probability needs to add up to 1. For example, assume that matter can only take on 3 phases: solid, liquid, or gas. Then p(solid) + p(liquid) + p(gas) = 1 for a given substance when we are trying to figure out what phase/class a particular compound belongs in given standard temperature and pressure. In this case, k = 3.
@@ -237,7 +233,8 @@ tags: []
 * See Murphy *Machine Learning: A Probabilistic Perspective* (2012); Bishop *Pattern Recognition and Machine Learning* (2006); and *Introduction to Statistical Learning* by James, Witten, Hastie, and R. Tibshirani (2021) as good ML textbooks to learn more about traditional supervised learning algorithms.
 
 
-### 5.8 Unsupervised Learning Algorithm
+***
+### 5.8 Unsupervised Learning Algorithms
 * add as needed
 
 #### 5.8.1 Principal Components Analysis
@@ -248,10 +245,11 @@ tags: []
 * add as needed
 
 
-
+***
 ### 5.9 Stochastic Gradient Descent
 * Intro to SGD. Calls back to basic gradient descent algorithm from Section 4.3 (p.79) and deeper dive in Chapter 8.
 
+***
 ### 5.10 Building an ML Algoirthm
 * Nearly all deep learning algorithms can be described as particular instances of a fairly simple recipe where we combine:
 	1. dataset
@@ -273,6 +271,7 @@ tags: []
 * Some models, such as decision trees andk-means, require special-case optimizers because their cost functions have ﬂat regions that make them inappropriate for minimization by gradient-based optimizers.
 * Recognizing that most machine learning algorithms can be described using this recipe helps to see the diﬀerent algorithms as part of a taxonomy of methods for doing related tasks that work for similar reasons, rather than as a long list of algorithms that each have separate justiﬁcations.
 
+***
 ### 5.11 Challenges that motivated deep learning
 * The simple machine learning algorithms described in this chapter work well on a wide variety of important problems. They have not succeeded, however, in solving the **central problems in AI**, e.g., **(1) recognizing speech** or **(2) recognizing objects.**
 * The development of deep learning was motivated in part by the failure of traditional algorithms to generalize well on such AI tasks.
@@ -319,7 +318,7 @@ tags: []
 * This is generally true when the function to be learned is smooth enough and varies in few enough dimensions. In high dimensions, even a very smooth function can change smoothly but in a diﬀerent way along each dimension. 
 * If the function additionally behaves diﬀerently in various regions, it can become extremely complicated to describe with a set oftraining examples. If the function is complicated--we want to distinguish a huge number of regions compared to the number of examples--is there any hope to generalize well?
 * The answer to both of these questions--whether it is possible to represent a complicated function eﬃciently, and whether it is possible for the estimated function to generalize well to new inputs--is yes.
-* The key insight is that a very large number of regions, such as *O(2<sup>k</sup>)*, can be defined with *O(k) examples, so long as we introduce some dependencies between the regions through additional assumptions about the underlying data-generating distribution.
+* The key insight is that a very large number of regions, such as *O(2<sup>k</sup>)*, can be defined with *O(k)* examples, so long as we introduce some dependencies between the regions through additional assumptions about the underlying data-generating distribution.
 * In this way, we can actually generalize nonlocally. See Bengio and Monperrus (2005) and Bengio, Larochelle, and Vincent (2006) 'Non-local manifold Parzen windows'
 * Many different deep learning algorithms provide implicit or explicit assumptions that are reasonable for a broad ranger of AI tasks in order to capture these advantages.
 * p.155 Other approaches to machine learning often make stronger, task-specific assumptions.
@@ -372,7 +371,7 @@ tags: []
 
 
 
-
+***
 
 
 ##### Double-struck R for Real numbers

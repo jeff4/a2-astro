@@ -15,6 +15,33 @@ tags: []
 * Ian Goodfellow, Yoshua Bengio, and Aaron Courville
 * GBC
 ## Chapter 6: Deep Feedforward Networks p. 163
+
+
+
+##### Double-struck R for Real numbers
+* "rp = double-struck R = &#8477; 
+* "tp = theta = **&#952;**
+* "hp = theta-hat = **&#952;-hat**
+* "pp = vector arrow above prior character = &#8407; 
+* "yp = lowercase phi = &#966;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Section 6.5: Overview of Backprop and other Differentiation Algorithms
 #### 6.5.1: Introduction to Computational Graphs
 #### 6.5.8: Complications (aka practical considerations) wrt simple theoretical narrative about backprop
