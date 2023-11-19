@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Goodfellow (GBC) Chapter 6'
 pubDate: 2023-11-15
-description: 'Historical notes from GBC esp. 1980s onwards Chapter 6, esp. Section 6.6'
+description: 'Deep Feedforward Networks, including history from 1980s onwards in Section 6.6'
 author: 'Jeff'
 image:
     url: ""
@@ -15,6 +15,47 @@ tags: []
 * Ian Goodfellow, Yoshua Bengio, and Aaron Courville
 * GBC
 ## Chapter 6: Deep Feedforward Networks p. 163
+* Basic definitions p.163-165: **depth** referring to number of hidden layers between input layer and output layer. **width** of each layer refers to how many dimensions can be managed. Each artificial neuron can be referred to as a **unit**.
+* p.164 Rather than thinking of the layer as representing a single vector-to-vector function, we can also think of the layer as consisting of many units that act in parallel. Each unit can be thought of as a vector-to-scalar function; aka, multiple values for input to a neuron and a output a single activation value.
+
+### Extending linear models to represent nonlinear functions
+* To extend linear models to represent nonlinear functions of x&#8407; , we can apply the linear model not to x&#8407; itself but instead to a transformed input phi &#966;(x&#8407;), where phi is a nonlinear transformation
+* Equivalently, we can apply the kernel trick from Section 5.7.2. to obtain a nonlinear learning algorithm based on implicitly applying the phi &#966; mapping. 
+* We can think of &#966; as providing a set of features describing x&#8407;, or as providing a new representation x&#8407;.  
+
+### Three options of how to choose the mapping &#966;
+* Option 1 - Use a very generic &#966;
+* Option 2 - Manually engineer &#966;
+* Option 3 - Deep learning to *learn* mapping &#966;
+
+### Quick overview of the rest of Chapter 6
+* Simple example of a feedforward network
+* Address each of the design decisions needed to deploy a feedforward network
+* Review the basics of gradient-based learning.
+* Choice of activation function (logistic sigmoid, hyperbolic tangent, softmax, etc.)
+* Quick intro to backpropagation
+
+### Example: Learning Exclusive OR (XOR)
+* What is theta **&#952;** in this context? p. 167. "Now we must choose the form of our model, f(x&#8407;, **&#952;**). Suppose that we choose a linear model, theta **&#952;** consists of a vector w&#8407; and a single scalar bias b. Vector w&#8407; contains multiple weights.
+* We can minimize objective function J(&#966;) in closed form with respect to w&#8407; and b using the normal equations. 
+* Talks about Minsky's 1969 critique of learning XOR, and how it's solved by having at least 1 hidden layer. So now there is not a single function, but two functions f<sub>1</sub> and f<sub>2</sub>.
+* p.168 classic diagram of learning XOR Figure 6.1
+* p.168 definition of **ReLU** aka **rectified linear unit**. Relevant papers were only published 2009-2011.
+* p.169 diagram of activation function Fig. 6.3. 
+	* The ReLU function is the default activation function recommended nowadays for most feedforward ANNs. Applying this function to the output of a linear transformation yields a nonlinear transformation. 
+	* The function remains very close to linear, however, in the sense that it is a piecedwise linear function with 2 linear pieces. 
+	* Because ReLUs are very nearly linear, they preserve many of the properties that make linear models easy to optimize with gradient-based methods.
+	* They also preserve manhy of the properties that make linear models generalize well.
+	* A common princinple throughout computer science
+
+
+
+
+
+
+
+
+
 
 
 
