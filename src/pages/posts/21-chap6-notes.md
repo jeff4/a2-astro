@@ -24,10 +24,42 @@ tags: []
 * We can think of &#966; as providing a set of features describing x&#8407;, or as providing a new representation x&#8407;.  
 
 ### Three options of how to choose the mapping &#966;
-* Option 1 - Use a very generic &#966;
-* Option 2 - Manually engineer &#966;
-* Option 3 - Deep learning to *learn* mapping &#966;
+* Technically, the mapping phi &#966;: **X**&#8594;**Y**. Where an input x&#8407; is an element of domain **X** which is &#8477;<sup>m</sup>. And the output for a given x&#8407; from function phi is a value y&#8407; which is an element of co-domain **Y** which has dimensionality &#8477;<sup>n</sup>. 
+* Technically, the mapping phi &#966;: **X**&#8594;**Y**. Exactly equivalent to saying &#966;: &#8477;<sup>m</sup> &#8594; &#8477;<sup>n</sup>.
+	* Where an input x&#8407; &#8712; domain **X** which is &#8477;<sup>m</sup>. And the output for a given x&#8407; from function phi is a value y&#8407; &#8712; co-domain **Y** which has dimensionality &#8477;<sup>n</sup>. 
 
+1. **Option 1** - Use a very generic &#966;
+	* i.e., create a function phi &#966; that maps from an infinite-dimensional domain to a finite-dimensional co-domain, aka &#966;: &#8477;<sup>&#8734;</sup> &#8594; &#8477;<sup>n</sup>. 
+	* This is implicitly what kernel machines do based on the RBF kernel (radial based function). See kernel machines on p. 139.
+	* If &#966;(x&#8407;) is high-dimensional enough, it has enough model capacity to describe the data-generating process suggested by the training dataset. i.e., we will have done a good job minimizing training error.
+	* However, if the capacity is too high, we will have overfitting problems. i.e., When we apply this model to new examples from the test dataset, it will have overlearned the training dataset and we will see generalization errors. The usual problems described from Section 5.2 (p.107).
+1. **Option 2** - Manually engineer &#966;
+	* Before we invented deep learning, the hand-crafted approach was the most common strategy. Sounds like symbolic AI to me....
+	* i.e., Manual engineering of &#966;(x&#8407;) required decades of human effort to learn each separate task.
+	* Different hunan practitioners specialized in different domains such as speech recognition, computer vision, etc.
+	* There was litte transfer between different domains.
+1. **Option 3** - Deep learning to *learn* mapping &#966;
+
+
+
+##### Double-struck R for Real numbers
+* "rp = double-struck R = &#8477;
+* "tp = theta = **&#952;**
+* "hp = theta-hat = **&#952;-hat**
+* "pp = vector arrow above prior character = &#8407;
+* "yp = lowercase phi = &#966;
+* "ip = infinity = &#8734;
+* "ap = rightward pointing arrow = &#8594;
+* "ep = element of = &#8712;
+
+
+
+
+
+
+
+
+***
 ### Quick overview of the rest of Chapter 6
 * Simple example of a feedforward network
 * Address each of the design decisions needed to deploy a feedforward network
@@ -46,42 +78,9 @@ tags: []
 	* The function remains very close to linear, however, in the sense that it is a piecedwise linear function with 2 linear pieces. 
 	* Because ReLUs are very nearly linear, they preserve many of the properties that make linear models easy to optimize with gradient-based methods.
 	* They also preserve manhy of the properties that make linear models generalize well.
-	* A common princinple throughout computer science
+	* A common principle throughout computer science
 
-
-
-
-
-
-
-
-
-
-
-
-##### Double-struck R for Real numbers
-* "rp = double-struck R = &#8477; 
-* "tp = theta = **&#952;**
-* "hp = theta-hat = **&#952;-hat**
-* "pp = vector arrow above prior character = &#8407; 
-* "yp = lowercase phi = &#966;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+***
 
 ### Section 6.5: Overview of Backprop and other Differentiation Algorithms
 #### 6.5.1: Introduction to Computational Graphs
