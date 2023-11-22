@@ -14,6 +14,10 @@ tags: []
 ## Deep Learning (GBC) Chapter 5
 * [Link](https://www.deeplearningbook.org) to main Goodfellow, Bengio, Courville textbook site.
 * [Direct link](https://www.deeplearningbook.org/contents/ml.html) to PDF copy of Chapter 5: Machine Learning Basics.
+* See also [Learning from Data](www.amlbook.com) book by **Abu-Mostafa, Magdon-Ismail, and Lin (aka AML)**. Relevant chapters: 
+	* Chapter 2 (training set, test set, generalization, VC dimension, Bias vs. Variance) 
+	* Chapter 3 (Linear Model-- better to map to GBC Chapter 6 XOR) 
+	* Chapter 4 (Overfitting, Regularization, Weight Decay, and Validation Dataset)
 ***
 ### 5.1 Learning Algorithms
 * Section 5.1.1 - The Task *T* can be many things: classification, classification with missing errors, regression, transcription, machine translation, structured output, anomaly detection, synthesis/sampling, imputation of missing values, denoising, density estimation *aka* probability mass function estimation.

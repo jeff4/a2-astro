@@ -14,13 +14,16 @@ tags: []
 **Deep Learning (2016)** 
 * Ian Goodfellow, Yoshua Bengio, and Aaron Courville
 * GBC
+* See also [Learning from Data](www.amlbook.com) book by **Abu-Mostafa, Magdon-Ismail, and Lin (aka AML)**. Relevant chapters: 
+	* Chapter 2 (training set, test set, generalization, VC dimension, Bias vs. Variance; most relevant to GDB Chap 5) 
+	* Chapter 3 (Linear Model-- most relevant to GDB Chapter 6)
+	* Chapter 4 (Overfitting, Regularization, Weight Decay, and Validation Dataset)
 ## Chapter 6: Deep Feedforward Networks p. 163
 * Basic definitions p.163-165: **depth** referring to number of hidden layers between input layer and output layer. **width** of each layer refers to how many dimensions can be managed. Each artificial neuron can be referred to as a **unit**.
 * p.164 Rather than thinking of the layer as representing a single vector-to-vector function, we can also think of the layer as consisting of many units that act in parallel. Each unit can be thought of as a vector-to-scalar function; aka, multiple values for input to a neuron and a output a single activation value.
 * **Important note about *asterisk* notation.** For a given function **g(x)**, the notation **g<sup>*</sup>(x)** indicates the optimal values of x such that dg/dx = g'(x) = 0. i
 	* For example, when we engage in deep learning, we are trying to iteratively optimize the objective function **J(&#952;)** such that **J(&#952;)** gets as close as possible to **J<sup>*</sup>(&#952;)**. 
 	* Aka **J(&#952;)** &#8776; **J<sup>*</sup>(&#952;)** 
-
 
 ### Extending linear models to represent nonlinear functions
 * p.164 To extend linear models to represent nonlinear functions of x&#8407; , we can apply the linear model not to x&#8407; itself but instead to a transformed input phi &#966;(x&#8407;), where phi is a nonlinear transformation
@@ -99,7 +102,6 @@ tags: []
 
 
 
-
 ##### Double-struck R for Real numbers
 * "rp = double-struck R = &#8477;
 * "tp = theta = **&#952;**
@@ -117,7 +119,8 @@ tags: []
 
 
 
-
+### 11/22 notes
+* Pulled out Learning From Data and their alternative take on all this material is excellent and useful. Takes some time to get the math though...
 
 
 
