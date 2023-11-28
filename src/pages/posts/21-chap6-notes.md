@@ -56,7 +56,7 @@ tags: []
 	* w&#8407; is another vector parameter that maps from &#966;(x&#8407;) to the ultimate output in **Y**. *JH: not 100% sure about this part*
 * Of the 3 options outlined above on p.165, Option 3 Deep Learning is the only one that gives up the convexity of the training problem; however, the benefits outweight the costs.
 * In this approach, we parametrize the representation as &#966;(x&#8407;;**&#952;**) and use the optimization algorithm to find the value for **&#952;** that best corresponds to a good representation.
-* If we wish, this approach can capture the benefit o the first approach by being highly generic--we do so by using a very broad family of functions &#966;(x&#8407;;**&#952;**). 
+* If we wish, this approach can capture the benefit of the first approach by being highly generic--we do so by using a very broad family of functions &#966;(x&#8407;;**&#952;**). 
 * Deep learning can also capture the benefits of option 2 above (manual construction).
 	* Human practitioners can encode their knowledge to help generalization by designing families &#966;(x&#8407;;**&#952;**) that they expect can perform well.
 	* Using DL, now the human practioner can focus on finding the right *general family of functions* and then letting SDG etc find the ideal function (or ideal enough). 
@@ -96,11 +96,43 @@ tags: []
 		* 1,0; 0,1 --> output=1
 	* First let us demonstrate the naive implementation using linear regression and MSE (Mean Squared Error), which results in weights = 0 and b = 1/2. 
 	* This means the output of the naive regression is always 1/2. We don't want that. In fact, Minsky proved in 1968 that a proper XOR functionality is impossible to train via neural networks; at least one that only has 2 layers..
+
 * p.167 To solve this with a neural network, we need to have a *third*, hidden layer added. To write out equations and diagrams related to the XOR ANN, see Comp Sci notebook #1, November 21, 2023 drawings.
-	* We have two functions that run sequentially. First f<sup>1</sup>(x&#8407;) outputs h. Then, f<sup>2</sup>(h) outputs y. 
+	* We have two functions that run sequentially. First f<sub>1</sub>(x&#8407;) outputs **h**. Then, f<sub>2</sub>(**h**) outputs y. 
 	* *Formatting issue:* in above equestions, *h* should have a vector arrow drawn above it, but *h&#8407;* looks weird.
 
+### 11/22 notes
+* Pulled out Learning From Data and their alternative take on all this material is excellent and useful. Takes some time to get the math though...
 
+## Notes for Nueva Jan 2024
+* History of computing link by Steve Furber, one of the early ARM chip designers. Published March 2017. ['Microprocessors: the engines of the digital age.'](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5378251/)
+
+
+#### Using a simple feedforward network to solve XOR
+* p. 167 A simple feedforward network is able to learn a different feature space in which a linear model is able to represent the solution.
+* Specifically, we will introduce a simple FFN with one hidden layer containing 2 hidden units. See diagram drawn in JH Comp Science #1, 11/21/2023; p.169, Figure 6.2.
+* This feedforward network has a vector of hidden units **h** that are computed by a function f<sub>1</sub>(x&#8407;; **`W`**,c&#8407;). Where **`W`** is a matrix containing the weights for both neurons h<sub>1</sub> and h<sub>2</sub>.
+    * The output of function f<sub>1</sub> is then used for the 2nd, output layer.
+    * The output layer is still just a linear regression model which is now applied to **h** rather than the inital input x&#8407;.
+* Most ANNs use an affine transformation controlled by learned parameters, followed by a fixed nonlinear function called an activation function.
+* We use that strategy here by defining **h** = g(**`W`**<sup>transpose</sup>x&#8407; + c&#8407;) where **`W`** is a matrix that provides the weights of a linear transformation and vector c&#8407; provides the biases.
+* Previously, to describe a linear regression model, we used a vector of weights and a scalar bias parameter to describe an affine transformation from an input vector to an output scalar.
+* Now, we describe an affine transformation from a vector x&#8407; to a vector **h**, so that an entire vector of bias parameters is needed.
+* The activation function g is typically chosen to be a function that is applied element-wise, with each h<sub>i</sub> = g(x&#8407;<sup>transpose</sup>**`W`**<sub>i</sub>+c<sub>i</sub>).
+* In modern ANNs, the default recommendation is to use the rectified Linear Unit **ReLU**.
+* We can specify the complete network as f(x&#8407;;**`W`**,c&#8407;, w&#8407;, b) = w<sup>transpose</sup>max(
+* (End of p. 168)
+
+
+
+
+
+
+
+
+
+
+###
 
 ##### Double-struck R for Real numbers
 * "rp = double-struck R = &#8477;
@@ -111,16 +143,11 @@ tags: []
 * "ip = infinity = &#8734;
 * "ap = rightward pointing arrow = &#8594;
 * "ep = element of = &#8712;
+* "wp = matrix W = **`W`**
 
 
 
 
-
-
-
-
-### 11/22 notes
-* Pulled out Learning From Data and their alternative take on all this material is excellent and useful. Takes some time to get the math though...
 
 
 
