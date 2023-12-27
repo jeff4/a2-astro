@@ -13,3 +13,23 @@ tags: []
 ***
 
 * [Main link](https://mindscale-site-dev.web.app)
+* iOS app one is Palette Cam that can tell me hex values etc
+* iOS app two is Color Name that has pre-selected lists of colors. Paid sub for $15/month
+* Article from Polar Vectors on [Color Trends 2024](https://polarvectors.com/color-trends-2024/)
+	* Sophisticated Blues
+	* Sunset Pinks
+	* Oranges
+* Notes Wednesday 12/27/2023
+
+## Iteration as of 10:23 am
+* Dark Blue background is Oxford Blue 082144
+* Light blue accent b5d7e4
+	* Used for both gradient transition
+	* And AI Agents box on homepage	
+* Bright Magenta for CTA and Mindscale wordmark eC368e
+* Dark gray 262626
+* Native Mac App > 'Digital Color Meter'
+
+## Other candidate colors
+* Light Cornflower Blue 93ccea
+* Lime electric for AI agents bfff00
