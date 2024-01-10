@@ -1,4 +1,5 @@
 ---
+
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Color tests'
 pubDate: 2023-12-27
@@ -13,6 +14,16 @@ tags: []
 ***
 
 * [Main link](https://mindscale-site-dev.web.app)
+* 2024 thoughts
+* how does the video and application look on the homepage?
+
+
+
+
+
+
+***
+
 * iOS app one is Palette Cam that can tell me hex values etc
 * iOS app two is Color Name that has pre-selected lists of colors. Paid sub for $15/month
 * Article from Polar Vectors on [Color Trends 2024](https://polarvectors.com/color-trends-2024/)
@@ -33,3 +44,15 @@ tags: []
 ## Other candidate colors
 * Light Cornflower Blue 93ccea
 * Lime electric for AI agents bfff00
+
+## More comments
+* change font within video 
+* 
+
+
+
+
+
+
+
+
