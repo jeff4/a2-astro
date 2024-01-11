@@ -11,14 +11,28 @@ image:
 tags: []
 ---
 
+HR app
+* find documents
+* find end documents
+* don't start with the technology itself
+* Probably the best dev is someone with a background in search and knowledge indexing b/c tey will will do RAG + vector databases quickly.
+* Product UI / UX defined
+
+
+
+
+
+
+
+
+
 ***
 
 * [Main link](https://mindscale-site-dev.web.app)
-* 2024 thoughts
+
+## Notes 
+* change highlight color of top nav to blue 51bdf9
 * how does the video and application look on the homepage?
-
-
-
 
 
 
